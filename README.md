@@ -61,8 +61,9 @@ const data = toShapes(configuration, repeatCount);
 }
 ```
 
-To get the actual vertices of the shapes just call:
+To get the actual vertices of a shape just call:
 ```
+const { c, θm, sides } = shape;
 fromCentroidAndAngle(c, θm, sides, shapeSize);  //=> array of points, i.e. `points: number[][]`
 ```
 
