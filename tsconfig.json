@@ -6,7 +6,7 @@
       "allowSyntheticDefaultImports": true,
       "moduleResolution": "node",
       "target": "es2022",
-      "declaration": false,
+      "declaration": true,
       "noEmitOnError": true,
       "sourceMap": true,
       "outDir": "./dist",
