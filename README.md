@@ -9,7 +9,7 @@ The major differences are:
 
 
 <p align="center">
-  <img src="./site/assets/antwerp.svg" />
+  <img src="./assets/antwerp.svg" />
 </p>
 
 <h2 align="center" style="margin: 0">ANTWERP</h2>
@@ -20,6 +20,8 @@ The major differences are:
   A web application for visualising the <a href="https://hogg.io/writings/generating-tessellations">GomJau-Hogg notation</a> for generating any regular polygon tessellations.
 </p>
 
+
+## [Demo](https://florissteenkamp.github.io/gomjau-hogg)
 
 ## Installation
 
@@ -68,35 +70,6 @@ To get the actual vertices of a shape just call:
 const { c, θm, sides } = shape;
 fromCentroidAndAngle(c, θm, sides, shapeSize);  //=> array of points, i.e. `points: number[][]`
 ```
-
-
-### Running the [demo](https://florissteenkamp.github.io/gomjau-hogg)
-
-#### Clone the repo and install deps
-
-git clone git@github.com:FlorisSteenkamp/gomjau-hogg.git\
-npm i\
-cd sever\
-npm i\
-cd..\
-cd browser\
-npm i
-
-#### First run the server
-```
-cd server\
-npm run go
-
-```
-
-#### Then build the index.js file (auto copied to server folder)
-
-```
-cd browser\
-wepack -w
-```
-
-Then navigate to http://localhost:8080/ and click on the library icon at the top right.
 
 ### Demo Notes
 
