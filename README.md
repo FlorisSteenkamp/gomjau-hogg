@@ -29,7 +29,7 @@ npm install gomjau-hogg
 
 ### Usage
 
-```
+```typescript
 import { toShapes } from 'gomjau-hogg';
 
 const configuration = '6-4-3,3/m30/r(h1)';  // Any tesselation in GomJau-Hogg notation
@@ -62,7 +62,7 @@ const data = toShapes(configuration, repeatCount);
 ```
 
 To get the actual vertices of a shape just call:
-```
+```typescript
 const { c, θm, sides } = shape;
 fromCentroidAndAngle(c, θm, sides, shapeSize);  //=> array of points, i.e. `points: number[][]`
 ```
