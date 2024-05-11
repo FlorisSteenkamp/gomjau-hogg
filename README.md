@@ -70,7 +70,7 @@ fromCentroidAndAngle(c, θm, sides, shapeSize);  //=> array of points, i.e. `poi
 ```
 
 
-### Running the [demo](demo)
+### Running the [demo](https://github.com/FlorisSteenkamp/gomjau-hogg?)
 
 #### Clone the repo and install deps
 
