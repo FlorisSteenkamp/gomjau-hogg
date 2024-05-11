@@ -1,4 +1,16 @@
 {
+    "name": "gomjau-hogg",
+    "description": "Gomjau-hogg notation tessellations of regular polygons",
+    "version": "0.0.1",
+    "author": {
+        "name": "Harry Hogg (modified by Floris Steenkamp)"
+    },
+    "license": "MIT",
+    "type": "module",
+    "main": "index.js",
+    "engines": {
+        "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+    },
     "dependencies": {
 
     },
