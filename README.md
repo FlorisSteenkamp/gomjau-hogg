@@ -32,15 +32,17 @@ npm install gomjau-hogg
 ```typescript
 import { toShapes } from 'gomjau-hogg';
 
-const configuration = '6-4-3,3/m30/r(h1)';  // Any tesselation in GomJau-Hogg notation
+// Any tesselation in GomJau-Hogg notation
+const configuration = '6-4-3,3/m30/r(h1)';
 
 // transformation repetition count ~ c*sqrt of number of shapes tiled,
 // e.g. `15` results in `1099` tiles for the above configuration
 const repeatCount = 15;
 
-const shapeSize = 25;  // size of sidelength of shapes
+// size of sidelength of shapes
+const shapeSize = 25;  
 
-const data = toShapes(configuration, repeatCount);
+const data = toShapes(configuration, repeatCount, shapeSize);
 
 // `data` will be:
 {
@@ -72,17 +74,17 @@ fromCentroidAndAngle(c, θm, sides, shapeSize);  //=> array of points, i.e. `poi
 
 #### Clone the repo and install deps
 
-git clone git@github.com:FlorisSteenkamp/gomjau-hogg.git
-npm i
-cd sever
-npm i
-cd..
-cd browser
+git clone git@github.com:FlorisSteenkamp/gomjau-hogg.git\
+npm i\
+cd sever\
+npm i\
+cd..\
+cd browser\
 npm i
 
 #### First run the server
 ```
-cd server
+cd server\
 npm run go
 
 ```
@@ -90,7 +92,7 @@ npm run go
 #### Then build the index.js file (auto copied to server folder)
 
 ```
-cd browser
+cd browser\
 wepack -w
 ```
 
@@ -98,7 +100,7 @@ Then navigate to http://localhost:8080/ and click on the library icon at the top
 
 ### Demo Notes
 
-The demo has been hacked from the [https://antwerp.hogg.io/](original) and for the
+The demo has been hacked from the [original](https://antwerp.hogg.io/) and for the
 purpose of testing the library so lots of functionality has been removed mostly
 because I struggled (and didn't have the time) getting things (mostly the newest
 version of React Router and preshape) working but it's relatively easy to fix

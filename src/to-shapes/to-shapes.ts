@@ -118,8 +118,8 @@ function toShapes(
 
     ///////////////////
     const endTime = performance.now();
-    console.log('l', shapes_.length);
-    console.log(((endTime - startTime)).toFixed(1) + ' ms')
+    // console.log('l', shapes_.length);
+    // console.log(((endTime - startTime)).toFixed(1) + ' ms')
     ///////////////////
 
     const r = {
@@ -129,7 +129,7 @@ function toShapes(
         transformPointsMaps: transformPointsMaps_
     }
 
-    console.log(r)
+    // console.log(r)
 
     return r;
 }
