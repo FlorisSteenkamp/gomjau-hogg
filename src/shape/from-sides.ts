@@ -1,6 +1,6 @@
-import { sidelength_div_circumradius } from "../to-shapes/get-seed-shape";
 import { ShapeType } from "../types/shape-type";
 import { scaleVector } from "../vector/scale";
+import { sidelength_div_circumradius } from "./side-length-div-circumradius";
 
 const { cos, sin, PI } = Math;
 

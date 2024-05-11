@@ -1,21 +1,11 @@
-import { fromSides } from '../shape/from-radius';
+import { fromSides } from '../shape/from-sides';
 import { Shape } from '../shape/shape';
 import { ErrorSeed } from './errors';
 import { rotateShape } from '../shape/rotate-shape';
 import { ShapeType } from '../types/shape-type';
 
-const { sqrt, SQRT2 } = Math;
+const { sqrt } = Math;
 const SQRT3 = sqrt(3);
-
-
-/** Side length / circumradius */
-const sidelength_div_circumradius: { [k:number]: number } = {
-    3:  SQRT3,
-    4:  SQRT2,
-    6:  1,
-    8:  sqrt(2 - SQRT2),
-    12: sqrt(2 - SQRT3)
-};
 
 
 const seedShapes = {
@@ -48,6 +38,4 @@ function getSeedShape(sides: ShapeType): Shape {
 }
 
 
-export {
-    getSeedShape, seedShapes, sidelength_div_circumradius,
-}
+export { getSeedShape, seedShapes }
