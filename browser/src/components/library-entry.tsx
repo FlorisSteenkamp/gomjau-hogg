@@ -3,7 +3,7 @@ import { Antwerp } from '../antwerp';
 import { Box } from '../preshape/box/box';
 import { Text } from '../preshape/Text/Text';
 import { Configuration } from './configuration';
-import { Link, useSearch } from 'wouter';
+import { useSearch } from 'wouter';
 import { getUrlParams } from './utils/get-url-params';
 
 

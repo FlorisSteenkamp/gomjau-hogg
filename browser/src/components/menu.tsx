@@ -10,13 +10,13 @@ function Menu() {
     
     return (
         <List gap="x2">
-            <Link to={`/?${searchParamsStr}`}>
+            <Link to={`/gomjau-hogg/?${searchParamsStr}`}>
                 <ListItem  style={{ color: 'white' }}>
                     <Pencil size={"1.25rem"} />
                 </ListItem>
             </Link>
 
-            <Link to={`/library?${searchParamsStr}`}>
+            <Link to={`/gomjau-hogg/library?${searchParamsStr}`}>
                 <ListItem style={{ color: 'white' }}>
                     <Library size={"1.25rem"} />
                 </ListItem>

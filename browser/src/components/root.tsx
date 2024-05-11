@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Route, useLocation, Switch, useSearch, Link } from 'wouter';
+import { Route, Switch, useSearch, Link } from 'wouter';
 import { Box } from '../preshape/box/box';
 import { Editor } from './editor';
 import { Menu } from './menu';
@@ -27,7 +27,7 @@ function Root() {
                 <Box flex="horizontal" grow>
                     <Link
                         style={{ display: "block", textDecoration: 'none' }}
-                        href={`/?${searchParamsStr}`
+                        href={`/gomjau-hogg/?${searchParamsStr}`
                     }>
                         <Box
                             alignChildrenVertical="middle"
