@@ -27,7 +27,7 @@ function Root() {
                 <Box flex="horizontal" grow>
                     <Link
                         style={{ display: "block", textDecoration: 'none' }}
-                        href={`/gomjau-hogg/?${searchParamsStr}`
+                        href={`/?${searchParamsStr}`
                     }>
                         <Box
                             alignChildrenVertical="middle"
