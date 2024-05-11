@@ -84,6 +84,6 @@ Most notably:
 * `repeatCount` replaces `maxRepeat` in the web address search params
 * cannot directly edit notation - must use the library
 * options can only be set in the addess bar, an example being
-  - http://localhost:8080/?configuration=6-4-3%2C3%2Fm30%2Fr(h1)&repeatCount=20&shapeSize=20
+  - https://github.com/FlorisSteenkamp/gomjau-hogg/?configuration=6-4-3%2C3%2Fm30%2Fr(h1)&repeatCount=20&shapeSize=20
 * several minor omissions, e.g. only one way of coloring, doesn't display transforms, etc.
 
