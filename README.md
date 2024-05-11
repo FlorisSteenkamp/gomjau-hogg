@@ -1,3 +1,13 @@
+# This is a FORK of the original Antwerp.
+
+The original Antwerp can be found on [Github](https://github.com/HHogg/antwerp).
+
+The major differences are:
+* the original Antwerp has a better demo
+* runs optimally in `O(n)`; original runs in `O(n^3)` (where `n` is the number of tiles)
+* 🔥blazingly fast🔥 - under a *micro*-second per tiled shape
+
+
 <p align="center">
   <img src="./site/assets/antwerp.svg" />
 </p>
@@ -11,59 +21,93 @@
 </p>
 
 
-### Technology
-
-- [Typescript](https://www.typescriptlang.org/)
-- [Parcel](https://parceljs.org/) (bundler and dev servers)
-- [React](https://reactjs.org/)
-- [PostCSS](https://postcss.org/) (with postcss-preset-env for a little power)
-- [Two](https://two.js.org/) (2d drawing)
-- [Firebase](https://firebase.google.com/) (hosting)
-
-
-### Setup
-
-##### Prerequisites
-
-• [Node](https://nodejs.org/en/) - Either use [nvm use](https://github.com/nvm-sh/nvm) or checkout the tested version inside the [.nvmrc](./nmvrc) file.
-
-##### Setup
-
-Clone the repository
+## Installation
 
 ```
-git clone git@github.com:HHogg/antwerp.git
+npm install gomjau-hogg
 ```
 
-Install the dependencies with your favourite package manager
+### Usage
 
 ```
-yarn install
+import { toShapes } from 'gomjau-hogg';
+
+const configuration = '6-4-3,3/m30/r(h1)';  // Any tesselation in GomJau-Hogg notation
+
+// transformation repetition count ~ c*sqrt of number of shapes tiled,
+// e.g. `15` results in `1099` tiles for the above configuration
+const repeatCount = 15;
+
+const shapeSize = 25;  // size of sidelength of shapes
+
+const data = toShapes(configuration, repeatCount);
+
+// `data` will be:
+{
+    maxStage: 9,
+    maxStagePlacement: 4,
+    shapes: [
+        {
+          "sides": 6,  // number of sides of shape -> hexagon in this case
+          "stage": 0,  // transformation stage -> 0 means seed placement
+          "stagePlacement": 1,  // stage within each transformation - can be used for coloring
+          "θm": -6,    // the rotation angle of the shape in 𝜋/12 increments
+          "c": [0,0]   // shape centroid
+        },
+        { "sides": 4, "stage": 0, "stagePlacement": 2, "θm": 16, "c": [ 13.660254037844375, 23.660254037844393 ] },
+        ...
+    ],
+    transformPointsMaps: [Map(...)]  // map of transform points
+}
 ```
 
-##### Running
-
-Spin up the Parcel development server
-
+To get the actual vertices of the shapes just call:
 ```
-yarn start
-```
-
-##### Building
-
-Build the static files using Parcel
-
-```
-yarn build
-```
-
-##### Deploying
-
-Deploy to Firebase hosting (... after authenticating)
-
-```
-yarn deploy
+fromCentroidAndAngle(c, θm, sides, shapeSize);  //=> array of points, i.e. `points: number[][]`
 ```
 
 
+### Running the [demo](demo)
+
+#### Clone the repo and install deps
+
+git clone git@github.com:FlorisSteenkamp/gomjau-hogg.git
+npm i
+cd sever
+npm i
+cd..
+cd browser
+npm i
+
+#### First run the server
+```
+cd server
+npm run go
+
+```
+
+#### Then build the index.js file (auto copied to server folder)
+
+```
+cd browser
+wepack -w
+```
+
+Then navigate to http://localhost:8080/ and click on the library icon at the top right.
+
+### Demo Notes
+
+The demo has been hacked from the [https://antwerp.hogg.io/](original) and for the
+purpose of testing the library so lots of functionality has been removed mostly
+because I struggled (and didn't have the time) getting things (mostly the newest
+version of React Router and preshape) working but it's relatively easy to fix
+all the shortcomings.
+
+Most notably:
+* no web workers
+* `repeatCount` replaces `maxRepeat` in the web address search params
+* cannot directly edit notation - must use the library
+* options can only be set in the addess bar, an example being
+  - http://localhost:8080/?configuration=6-4-3%2C3%2Fm30%2Fr(h1)&repeatCount=20&shapeSize=20
+* several minor omissions, e.g. only one way of coloring, doesn't display transforms, etc.
 

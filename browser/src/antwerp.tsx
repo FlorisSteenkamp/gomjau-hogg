@@ -2,7 +2,6 @@ import * as React from 'react';
 import { BoxProps, Box } from './preshape/box/box';
 import { useResizeObserver } from './preshape/hooks/use-resize-observer';
 import { AntwerpData } from '../../src/types/antwerp-data';
-import { AntwerpOptions } from '../../src/types/antwerp-options';
 import { toShapes } from '../../src/to-shapes/to-shapes';
 import { ColorScale, getColorScale } from './utils/get-color-scale';
 import { drawShapes } from './antwerp-drawer/antwerp-drawer';
@@ -32,14 +31,8 @@ function Antwerp(props: Props) {
     const svgRef = React.useRef<SVGSVGElement>(null);
 
     React.useEffect(() => {
-        const options: AntwerpOptions = {
-            configuration,
-            repeatCount,
-            shapeSize,
-        };
-
         if (height && width) {
-            setData(toShapes(options));
+            setData(toShapes(configuration, repeatCount, shapeSize));
         }
     }, [configuration, repeatCount, shapeSize, height, width]);
 

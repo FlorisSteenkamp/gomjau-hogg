@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { Form } from '../preshape/Form/Form';
 import { Input } from '../preshape/Input/Input';
 import { Box } from '../preshape/box/box';
-import { Link } from 'wouter';
 import { Antwerp } from '../antwerp';
 import { useSearch } from 'wouter';
 import { getUrlParams } from './utils/get-url-params';
@@ -20,10 +18,7 @@ function Editor() {
 
 
     function handleUpdateConfiguration() {
-        toShapes({ configuration, shapeSize, repeatCount })
-        // onUpdateUrlState({ configuration: value });
-        
-        // navigate('')  //TODO2
+        toShapes(configuration, shapeSize, repeatCount);
     };
 
     function handleSubmit(event: React.FormEvent<HTMLFormElement>) {

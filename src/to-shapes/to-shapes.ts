@@ -1,5 +1,4 @@
 import { AntwerpData } from '../types/antwerp-data';
-import { AntwerpOptions } from '../types/antwerp-options';
 import { toEntities } from '../to-entities';
 import { getTransformPoints } from '../shapes/get-transform-points';
 import { getSeedShapes } from './get-seed-shapes';
@@ -33,12 +32,15 @@ import { scaleVector } from '../vector/scale';
  * of shapes grow as the square of this number and finally `shapeSize` representing
  * the length of each shape's edge.
  */
-function toShapes(options: AntwerpOptions): AntwerpData {
+function toShapes(
+        configuration: string,
+        repeatCount: number,
+        shapeSize: number): AntwerpData {
+
     const startTime = performance.now();
 
     const buckets = createBuckets();
 
-    const { configuration, repeatCount, shapeSize } = options;
     const { transforms } = toEntities(configuration);
 
     let { shapes, maxStagePlacement } = getSeedShapes(configuration);
@@ -116,16 +118,20 @@ function toShapes(options: AntwerpOptions): AntwerpData {
 
     ///////////////////
     const endTime = performance.now();
-    // console.log('l', shapes_.length);
+    console.log('l', shapes_.length);
     console.log(((endTime - startTime)).toFixed(1) + ' ms')
     ///////////////////
 
-    return {
+    const r = {
         shapes: shapes_,
         maxStage,
         maxStagePlacement,
         transformPointsMaps: transformPointsMaps_
-    };
+    }
+
+    console.log(r)
+
+    return r;
 }
 
 
