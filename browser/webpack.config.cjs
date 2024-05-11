@@ -33,7 +33,7 @@ module.exports = {
     },
     output: {
         // path: path.resolve(__dirname, '../server/build/static'),
-        path: path.resolve('../site'),
+        path: path.resolve('../'),
         filename: 'index.js'
     },
     stats: {
