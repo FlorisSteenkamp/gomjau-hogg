@@ -16,7 +16,7 @@ function Menu() {
                 </ListItem>
             </Link>
 
-            <Link to={`/library?${searchParamsStr}`}>
+            <Link to={`/gomjau-hogg/library?${searchParamsStr}`}>
                 <ListItem style={{ color: 'white' }}>
                     <Library size={"1.25rem"} />
                 </ListItem>
