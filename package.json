@@ -1,7 +1,7 @@
 {
     "name": "gomjau-hogg",
     "description": "Gomjau-hogg notation tessellations of regular polygons",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": {
         "name": "Harry Hogg (modified by Floris Steenkamp)"
     },
@@ -15,9 +15,7 @@
         "type": "git",
         "url": "git+https://github.com/FlorisSteenkamp/gomjau-hogg.git"
     },
-    "dependencies": {
-
-    },
+    "dependencies": {},
     "devDependencies": {
         "@jest/globals": "^29.7.0",
         "@swc/core": "^1.4.16",
