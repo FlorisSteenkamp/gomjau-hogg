@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+      "strict": true,
+      "module": "es2022",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "moduleResolution": "node",
+      "target": "es2022",
+      "declaration": false,
+      "noEmitOnError": true,
+      "sourceMap": true,
+      "outDir": "./dist",
+      "allowJs": true,
+      "paths": {},
+      "baseUrl": "."
+    },
+    "include": [
+        "./src/index.ts",
+        "./src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

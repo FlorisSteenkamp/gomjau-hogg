@@ -1,0 +1,421 @@
+.Box {
+    flex: 0 0 auto;
+    margin: 0;
+  }
+  
+  .Box--clickable { cursor: pointer; }
+  .Box--container { position: relative; }
+  
+  .Box--overflow-hidden { overflow: hidden; }
+  .Box--overflow-scroll { overflow: auto; }
+  
+  .Box[class*="Box--margin"] {
+    /**
+     * To support non-Box elements as siblings, this can't use first-child, last-child, etc.
+     * Instead, it uses the nth-child selector to target the first and last Box element.
+     */
+    &:nth-child(1 of .Box):not([class*="Box--padding-offset-top"]) { margin-top: 0; }
+    &:nth-last-child(1 of .Box):not([class*="Box--padding-offset-bottom"]) { margin-bottom: 0; }
+  }
+  
+  .Box--margin-x1 { margin: var(--size--x1) 0; }
+  .Box--margin-x2 { margin: var(--size--x2) 0; }
+  .Box--margin-x3 { margin: var(--size--x3) 0; }
+  .Box--margin-x4 { margin: var(--size--x4) 0; }
+  .Box--margin-x5 { margin: var(--size--x5) 0; }
+  .Box--margin-x6 { margin: var(--size--x6) 0; }
+  .Box--margin-x8 { margin: var(--size--x8) 0; }
+  .Box--margin-x10 { margin: var(--size--x10) 0; }
+  .Box--margin-x12 { margin: var(--size--x12) 0; }
+  .Box--margin-x16 { margin: var(--size--x16) 0; }
+  .Box--margin-x24 { margin: var(--size--x24) 0; }
+  .Box--margin-x32 { margin: var(--size--x32) 0; }
+  
+  .Box--padding-top-x0 { padding-top: 0; }
+  .Box--padding-top-x1 { padding-top: var(--size--x1); }
+  .Box--padding-top-x2 { padding-top: var(--size--x2); }
+  .Box--padding-top-x3 { padding-top: var(--size--x3); }
+  .Box--padding-top-x4 { padding-top: var(--size--x4); }
+  .Box--padding-top-x5 { padding-top: var(--size--x5); }
+  .Box--padding-top-x6 { padding-top: var(--size--x6); }
+  .Box--padding-top-x8 { padding-top: var(--size--x8); }
+  .Box--padding-top-x10 { padding-top: var(--size--x10); }
+  .Box--padding-top-x12 { padding-top: var(--size--x12); }
+  .Box--padding-top-x16 { padding-top: var(--size--x16); }
+  .Box--padding-top-x24 { padding-top: var(--size--x24); }
+  .Box--padding-top-x32 { padding-top: var(--size--x32); }
+  
+  .Box--padding-right-x0 { padding-right: 0; }
+  .Box--padding-right-x1 { padding-right: var(--size--x1); }
+  .Box--padding-right-x2 { padding-right: var(--size--x2); }
+  .Box--padding-right-x3 { padding-right: var(--size--x3); }
+  .Box--padding-right-x4 { padding-right: var(--size--x4); }
+  .Box--padding-right-x5 { padding-right: var(--size--x5); }
+  .Box--padding-right-x6 { padding-right: var(--size--x6); }
+  .Box--padding-right-x8 { padding-right: var(--size--x8); }
+  .Box--padding-right-x10 { padding-right: var(--size--x10); }
+  .Box--padding-right-x12 { padding-right: var(--size--x12); }
+  .Box--padding-right-x16 { padding-right: var(--size--x16); }
+  .Box--padding-right-x24 { padding-right: var(--size--x24); }
+  .Box--padding-right-x32 { padding-right: var(--size--x32); }
+  
+  .Box--padding-bottom-x0 { padding-bottom: 0; }
+  .Box--padding-bottom-x1 { padding-bottom: var(--size--x1); }
+  .Box--padding-bottom-x2 { padding-bottom: var(--size--x2); }
+  .Box--padding-bottom-x3 { padding-bottom: var(--size--x3); }
+  .Box--padding-bottom-x4 { padding-bottom: var(--size--x4); }
+  .Box--padding-bottom-x5 { padding-bottom: var(--size--x5); }
+  .Box--padding-bottom-x6 { padding-bottom: var(--size--x6); }
+  .Box--padding-bottom-x8 { padding-bottom: var(--size--x8); }
+  .Box--padding-bottom-x10 { padding-bottom: var(--size--x10); }
+  .Box--padding-bottom-x12 { padding-bottom: var(--size--x12); }
+  .Box--padding-bottom-x16 { padding-bottom: var(--size--x16); }
+  .Box--padding-bottom-x24 { padding-bottom: var(--size--x24); }
+  .Box--padding-bottom-x32 { padding-bottom: var(--size--x32); }
+  
+  .Box--padding-left-x0 { padding-left: 0; }
+  .Box--padding-left-x1 { padding-left: var(--size--x1); }
+  .Box--padding-left-x2 { padding-left: var(--size--x2); }
+  .Box--padding-left-x3 { padding-left: var(--size--x3); }
+  .Box--padding-left-x4 { padding-left: var(--size--x4); }
+  .Box--padding-left-x5 { padding-left: var(--size--x5); }
+  .Box--padding-left-x6 { padding-left: var(--size--x6); }
+  .Box--padding-left-x8 { padding-left: var(--size--x8); }
+  .Box--padding-left-x10 { padding-left: var(--size--x10); }
+  .Box--padding-left-x12 { padding-left: var(--size--x12); }
+  .Box--padding-left-x16 { padding-left: var(--size--x16); }
+  .Box--padding-left-x24 { padding-left: var(--size--x24); }
+  .Box--padding-left-x32 { padding-left: var(--size--x32); }
+  
+  .Box--padding-offset-bottom-x1 { margin-bottom: calc(var(--size--x1) * -1); }
+  .Box--padding-offset-bottom-x2 { margin-bottom: calc(var(--size--x2) * -1); }
+  .Box--padding-offset-bottom-x3 { margin-bottom: calc(var(--size--x3) * -1); }
+  .Box--padding-offset-bottom-x4 { margin-bottom: calc(var(--size--x4) * -1); }
+  .Box--padding-offset-bottom-x5 { margin-bottom: calc(var(--size--x5) * -1); }
+  .Box--padding-offset-bottom-x6 { margin-bottom: calc(var(--size--x6) * -1); }
+  .Box--padding-offset-bottom-x8 { margin-bottom: calc(var(--size--x8) * -1); }
+  .Box--padding-offset-bottom-x10 { margin-bottom: calc(var(--size--x10) * -1); }
+  .Box--padding-offset-bottom-x12 { margin-bottom: calc(var(--size--x12) * -1); }
+  .Box--padding-offset-bottom-x16 { margin-bottom: calc(var(--size--x16) * -1); }
+  .Box--padding-offset-bottom-x24 { margin-bottom: calc(var(--size--x24) * -1); }
+  .Box--padding-offset-bottom-x32 { margin-bottom: calc(var(--size--x32) * -1); }
+  
+  .Box--padding-offset-top-x1 { margin-top: calc(var(--size--x1) * -1); }
+  .Box--padding-offset-top-x2 { margin-top: calc(var(--size--x2) * -1); }
+  .Box--padding-offset-top-x3 { margin-top: calc(var(--size--x3) * -1); }
+  .Box--padding-offset-top-x4 { margin-top: calc(var(--size--x4) * -1); }
+  .Box--padding-offset-top-x5 { margin-top: calc(var(--size--x5) * -1); }
+  .Box--padding-offset-top-x6 { margin-top: calc(var(--size--x6) * -1); }
+  .Box--padding-offset-top-x8 { margin-top: calc(var(--size--x8) * -1); }
+  .Box--padding-offset-top-x10 { margin-top: calc(var(--size--x10) * -1); }
+  .Box--padding-offset-top-x12 { margin-top: calc(var(--size--x12) * -1); }
+  .Box--padding-offset-top-x16 { margin-top: calc(var(--size--x16) * -1); }
+  .Box--padding-offset-top-x24 { margin-top: calc(var(--size--x24) * -1); }
+  .Box--padding-offset-top-x32 { margin-top: calc(var(--size--x32) * -1); }
+  
+  .Box--padding-offset-right-x1 { margin-right: calc(var(--size--x1) * -1); }
+  .Box--padding-offset-right-x2 { margin-right: calc(var(--size--x2) * -1); }
+  .Box--padding-offset-right-x3 { margin-right: calc(var(--size--x3) * -1); }
+  .Box--padding-offset-right-x4 { margin-right: calc(var(--size--x4) * -1); }
+  .Box--padding-offset-right-x5 { margin-right: calc(var(--size--x5) * -1); }
+  .Box--padding-offset-right-x6 { margin-right: calc(var(--size--x6) * -1); }
+  .Box--padding-offset-right-x8 { margin-right: calc(var(--size--x8) * -1); }
+  .Box--padding-offset-right-x10 { margin-right: calc(var(--size--x10) * -1); }
+  .Box--padding-offset-right-x12 { margin-right: calc(var(--size--x12) * -1); }
+  .Box--padding-offset-right-x16 { margin-right: calc(var(--size--x16) * -1); }
+  .Box--padding-offset-right-x24 { margin-right: calc(var(--size--x24) * -1); }
+  .Box--padding-offset-right-x32 { margin-right: calc(var(--size--x32) * -1); }
+  
+  .Box--padding-offset-left-x1 { margin-left: calc(var(--size--x1) * -1); }
+  .Box--padding-offset-left-x2 { margin-left: calc(var(--size--x2) * -1); }
+  .Box--padding-offset-left-x3 { margin-left: calc(var(--size--x3) * -1); }
+  .Box--padding-offset-left-x4 { margin-left: calc(var(--size--x4) * -1); }
+  .Box--padding-offset-left-x5 { margin-left: calc(var(--size--x5) * -1); }
+  .Box--padding-offset-left-x6 { margin-left: calc(var(--size--x6) * -1); }
+  .Box--padding-offset-left-x8 { margin-left: calc(var(--size--x8) * -1); }
+  .Box--padding-offset-left-x10 { margin-left: calc(var(--size--x10) * -1); }
+  .Box--padding-offset-left-x12 { margin-left: calc(var(--size--x12) * -1); }
+  .Box--padding-offset-left-x16 { margin-left: calc(var(--size--x16) * -1); }
+  .Box--padding-offset-left-x24 { margin-left: calc(var(--size--x24) * -1); }
+  .Box--padding-offset-left-x32 { margin-left: calc(var(--size--x32) * -1); }
+  
+  .Box--border-radius-x1 { border-radius: var(--border-radius-size--x1); }
+  .Box--border-radius-x2 { border-radius: var(--border-radius-size--x2); }
+  .Box--border-radius-x3 { border-radius: var(--border-radius-size--x3); }
+  .Box--border-radius-x4 { border-radius: var(--border-radius-size--x4); }
+  .Box--border-radius-x5 { border-radius: var(--border-radius-size--x5); }
+  .Box--border-radius-x6 { border-radius: var(--border-radius-size--x6); }
+  .Box--border-radius-full { border-radius: 50%; }
+  
+  .Box--border-size-x1,
+  .Box--border {
+    border-width: var(--border-size--x1);
+  }
+  
+  .Box--border-size-x0 { border-width: 0; }
+  .Box--border-size-x2 { border-width: var(--border-size--x2); }
+  .Box--border-size-x3 { border-width: var(--border-size--x3); }
+  
+  .Box--border,
+  .Box--border-size-x1,
+  .Box--border-size-x2,
+  .Box--border-size-x3 {
+    border-style: solid;
+  }
+  
+  .Box--border-style-dashed {
+    border-style: dashed;
+  }
+  
+  .Box--border:not(.Box--border-top) { border-top-width: 0; }
+  .Box--border:not(.Box--border-right) { border-right-width: 0; }
+  .Box--border:not(.Box--border-bottom) { border-bottom-width: 0; }
+  .Box--border:not(.Box--border-left) { border-left-width: 0; }
+  
+  .Box--max-width {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .Box--elevate--x1 { box-shadow: var(--shadow-elevation--x1); }
+  
+  .Box--elevate,
+  .Box--elevate--x2 { box-shadow: var(--shadow-elevation--x2); }
+  .Box--elevate--x3 { box-shadow: var(--shadow-elevation--x3); }
+  
+  .Box--transition-fast,
+  .Box--transition-base,
+  .Box--transition-slow {
+    transition-timing-function: var(--transition-timing-function);
+  }
+  
+  .Box--transition-fast { transition-duration: var(--transition-duration--fast); }
+  .Box--transition-base { transition-duration: var(--transition-duration--base); }
+  .Box--transition-slow { transition-duration: var(--transition-duration--slow); }
+  
+  .Box--position-absolute {
+    position: absolute;
+  }
+  
+  .Box--position-fixed {
+    position: fixed;
+  }
+  
+  .Box--position-edge-to-edge {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .Box--position-edge-to-edge,
+  .Box--position-top,
+  .Box--position-top-left,
+  .Box--position-top-right { top: 0; }
+  
+  .Box--position-edge-to-edge,
+  .Box--position-bottom,
+  .Box--position-bottom-left,
+  .Box--position-bottom-right { bottom: 0; }
+  
+  .Box--position-edge-to-edge,
+  .Box--position-left,
+  .Box--position-top-left,
+  .Box--position-bottom-left { left: 0; }
+  
+  .Box--position-edge-to-edge,
+  .Box--position-right,
+  .Box--position-top-right,
+  .Box--position-bottom-right { right: 0; }
+  
+  .Box--position-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .Box--position-left,
+  .Box--position-right {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  
+  .Box--position-top,
+  .Box--position-bottom {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  
+  /********
+   * Flex *
+   ********/
+  .Box--flex-horizontal,
+  .Box--flex-vertical {
+    display: flex;
+  }
+  
+  .Box--flex-horizontal { flex-direction: row; }
+  .Box--flex-vertical   { flex-direction: column; }
+  
+  .Box--flex-reverse.Box--flex-horizontal { flex-direction: row-reverse; }
+  .Box--flex-reverse.Box--flex-vertical { flex-direction: column-reverse; }
+  
+  .Box--flex-horizontal > .Box--flex-basis-none { width: 0; }
+  .Box--flex-vertical > .Box--flex-basis-none { height: 0; }
+  
+  .Box--flex-wrap { flex-wrap: wrap; }
+  
+  .Box--flex-align-self-start  { align-self: flex-start; }
+  .Box--flex-align-self-middle { align-self: center; }
+  .Box--flex-align-self-end    { align-self: flex-end; }
+  
+  .Box--flex-horizontal.Box--flex-align-horz-stretch { justify-content: stretch; }
+  .Box--flex-horizontal.Box--flex-align-horz-start   { justify-content: flex-start; }
+  .Box--flex-horizontal.Box--flex-align-horz-middle  { justify-content: center; }
+  .Box--flex-horizontal.Box--flex-align-horz-end     { justify-content: flex-end; }
+  .Box--flex-horizontal.Box--flex-align-horz-around  { justify-content: space-around; }
+  .Box--flex-horizontal.Box--flex-align-horz-between { justify-content: space-between; }
+  
+  .Box--flex-horizontal.Box--flex-align-vert-start  { align-items: flex-start; }
+  .Box--flex-horizontal.Box--flex-align-vert-middle { align-items: center; }
+  .Box--flex-horizontal.Box--flex-align-vert-end    { align-items: flex-end; }
+  
+  .Box--flex-vertical.Box--flex-align-horz-start  { align-items: flex-start; }
+  .Box--flex-vertical.Box--flex-align-horz-middle { align-items: center; }
+  .Box--flex-vertical.Box--flex-align-horz-end    { align-items: flex-end; }
+  
+  .Box--flex-vertical.Box--flex-align-vert-start   { justify-content: flex-start; }
+  .Box--flex-vertical.Box--flex-align-vert-middle  { justify-content: center; }
+  .Box--flex-vertical.Box--flex-align-vert-end     { justify-content: flex-end; }
+  .Box--flex-vertical.Box--flex-align-vert-around  { justify-content: space-around; }
+  .Box--flex-vertical.Box--flex-align-vert-between { justify-content: space-between; }
+  
+  .Box--flex-gap-horizontal-x1 { column-gap: var(--size--x1); }
+  .Box--flex-gap-horizontal-x2 { column-gap: var(--size--x2); }
+  .Box--flex-gap-horizontal-x3 { column-gap: var(--size--x3); }
+  .Box--flex-gap-horizontal-x4 { column-gap: var(--size--x4); }
+  .Box--flex-gap-horizontal-x5 { column-gap: var(--size--x5); }
+  .Box--flex-gap-horizontal-x6 { column-gap: var(--size--x6); }
+  .Box--flex-gap-horizontal-x8 { column-gap: var(--size--x8); }
+  .Box--flex-gap-horizontal-x10 { column-gap: var(--size--x10); }
+  .Box--flex-gap-horizontal-x12 { column-gap: var(--size--x12); }
+  .Box--flex-gap-horizontal-x16 { column-gap: var(--size--x16); }
+  .Box--flex-gap-horizontal-x24 { column-gap: var(--size--x24); }
+  .Box--flex-gap-horizontal-x32 { column-gap: var(--size--x32); }
+  
+  .Box--flex-gap-vertical-x1 { row-gap: var(--size--x1); }
+  .Box--flex-gap-vertical-x2 { row-gap: var(--size--x2); }
+  .Box--flex-gap-vertical-x3 { row-gap: var(--size--x3); }
+  .Box--flex-gap-vertical-x4 { row-gap: var(--size--x4); }
+  .Box--flex-gap-vertical-x5 { row-gap: var(--size--x5); }
+  .Box--flex-gap-vertical-x6 { row-gap: var(--size--x6); }
+  .Box--flex-gap-vertical-x8 { row-gap: var(--size--x8); }
+  .Box--flex-gap-vertical-x10 { row-gap: var(--size--x10); }
+  .Box--flex-gap-vertical-x12 { row-gap: var(--size--x12); }
+  .Box--flex-gap-vertical-x16 { row-gap: var(--size--x16); }
+  .Box--flex-gap-vertical-x24 { row-gap: var(--size--x24); }
+  .Box--flex-gap-vertical-x32 { row-gap: var(--size--x32); }
+  
+  /**********
+   * Colors *
+   **********/
+  .Box--background-color-black { background-color: var(--color-black); }
+  .Box--background-color-white { background-color: var(--color-white); }
+  .Box--background-color-highlight { background-color: var(--color-highlight); }
+  .Box--background-color-overlay { background-color: var(--color-overlay); }
+  .Box--background-color-transparent { background-color: transparent; }
+  .Box--background-color-accent-shade-1 { background-color: var(--color-accent-shade-1); }
+  .Box--background-color-accent-shade-2 { background-color: var(--color-accent-shade-2); }
+  .Box--background-color-accent-shade-3 { background-color: var(--color-accent-shade-3); }
+  .Box--background-color-accent-shade-4 { background-color: var(--color-accent-shade-4); }
+  .Box--background-color-accent-shade-5 { background-color: var(--color-accent-shade-5); }
+  .Box--background-color-background-shade-1 { background-color: var(--color-background-shade-1); }
+  .Box--background-color-background-shade-2 { background-color: var(--color-background-shade-2); }
+  .Box--background-color-background-shade-3 { background-color: var(--color-background-shade-3); }
+  .Box--background-color-background-shade-4 { background-color: var(--color-background-shade-4); }
+  .Box--background-color-dark-shade-1 { background-color: var(--color-dark-shade-1); }
+  .Box--background-color-dark-shade-2 { background-color: var(--color-dark-shade-2); }
+  .Box--background-color-dark-shade-3 { background-color: var(--color-dark-shade-3); }
+  .Box--background-color-light-shade-1 { background-color: var(--color-light-shade-1); }
+  .Box--background-color-light-shade-2 { background-color: var(--color-light-shade-2); }
+  .Box--background-color-light-shade-3 { background-color: var(--color-light-shade-3); }
+  .Box--background-color-text-shade-1 { background-color: var(--color-text-shade-1); }
+  .Box--background-color-text-shade-2 { background-color: var(--color-text-shade-2); }
+  .Box--background-color-text-shade-3 { background-color: var(--color-text-shade-3); }
+  .Box--background-color-negative-shade-1 { background-color: var(--color-negative-shade-1); }
+  .Box--background-color-negative-shade-2 { background-color: var(--color-negative-shade-2); }
+  .Box--background-color-negative-shade-3 { background-color: var(--color-negative-shade-3); }
+  .Box--background-color-negative-shade-4 { background-color: var(--color-negative-shade-4); }
+  .Box--background-color-negative-shade-5 { background-color: var(--color-negative-shade-5); }
+  .Box--background-color-positive-shade-1 { background-color: var(--color-positive-shade-1); }
+  .Box--background-color-positive-shade-2 { background-color: var(--color-positive-shade-2); }
+  .Box--background-color-positive-shade-3 { background-color: var(--color-positive-shade-3); }
+  .Box--background-color-positive-shade-4 { background-color: var(--color-positive-shade-4); }
+  .Box--background-color-positive-shade-5 { background-color: var(--color-positive-shade-5); }
+  
+  .Box--border-color-black { border-color: var(--color-black); }
+  .Box--border-color-white { border-color: var(--color-white); }
+  .Box--border-color-highlight { border-color: var(--color-highlight); }
+  .Box--border-color-transparent { border-color: transparent; }
+  .Box--border-color-accent-shade-1 { border-color: var(--color-accent-shade-1); }
+  .Box--border-color-accent-shade-2 { border-color: var(--color-accent-shade-2); }
+  .Box--border-color-accent-shade-3 { border-color: var(--color-accent-shade-3); }
+  .Box--border-color-accent-shade-4 { border-color: var(--color-accent-shade-4); }
+  .Box--border-color-accent-shade-5 { border-color: var(--color-accent-shade-5); }
+  .Box--border-color-background-shade-1 { border-color: var(--color-background-shade-1); }
+  .Box--border-color-background-shade-2 { border-color: var(--color-background-shade-2); }
+  .Box--border-color-background-shade-3 { border-color: var(--color-background-shade-3); }
+  .Box--border-color-background-shade-4 { border-color: var(--color-background-shade-4); }
+  .Box--border-color-dark-shade-1 { border-color: var(--color-dark-shade-1); }
+  .Box--border-color-dark-shade-2 { border-color: var(--color-dark-shade-2); }
+  .Box--border-color-dark-shade-3 { border-color: var(--color-dark-shade-3); }
+  .Box--border-color-light-shade-1 { border-color: var(--color-light-shade-1); }
+  .Box--border-color-light-shade-2 { border-color: var(--color-light-shade-2); }
+  .Box--border-color-light-shade-3 { border-color: var(--color-light-shade-3); }
+  .Box--border-color-text-shade-1 { border-color: var(--color-text-shade-1); }
+  .Box--border-color-text-shade-2 { border-color: var(--color-text-shade-2); }
+  .Box--border-color-text-shade-3 { border-color: var(--color-text-shade-3); }
+  .Box--border-color-text-shade-4 { border-color: var(--color-text-shade-4); }
+  .Box--border-color-negative-shade-1 { border-color: var(--color-negative-shade-1); }
+  .Box--border-color-negative-shade-2 { border-color: var(--color-negative-shade-2); }
+  .Box--border-color-negative-shade-3 { border-color: var(--color-negative-shade-3); }
+  .Box--border-color-negative-shade-4 { border-color: var(--color-negative-shade-4); }
+  .Box--border-color-negative-shade-5 { border-color: var(--color-negative-shade-5); }
+  .Box--border-color-positive-shade-1 { border-color: var(--color-positive-shade-1); }
+  .Box--border-color-positive-shade-2 { border-color: var(--color-positive-shade-2); }
+  .Box--border-color-positive-shade-3 { border-color: var(--color-positive-shade-3); }
+  .Box--border-color-positive-shade-4 { border-color: var(--color-positive-shade-4); }
+  .Box--border-color-positive-shade-5 { border-color: var(--color-positive-shade-5); }
+  
+  .Box--text-color-black { color: var(--color-black); }
+  .Box--text-color-white { color: var(--color-white); }
+  .Box--text-color-highlight { color: var(--color-highlight); }
+  .Box--text-color-transparent { color: transparent; }
+  .Box--text-color-accent-shade-1 { color: var(--color-accent-shade-1); }
+  .Box--text-color-accent-shade-2 { color: var(--color-accent-shade-2); }
+  .Box--text-color-accent-shade-3 { color: var(--color-accent-shade-3); }
+  .Box--text-color-accent-shade-4 { color: var(--color-accent-shade-4); }
+  .Box--text-color-accent-shade-5 { color: var(--color-accent-shade-5); }
+  .Box--text-color-background-shade-1 { color: var(--color-background-shade-1); }
+  .Box--text-color-background-shade-2 { color: var(--color-background-shade-2); }
+  .Box--text-color-background-shade-3 { color: var(--color-background-shade-3); }
+  .Box--text-color-background-shade-4 { color: var(--color-background-shade-4); }
+  .Box--text-color-dark-shade-1 { color: var(--color-dark-shade-1); }
+  .Box--text-color-dark-shade-2 { color: var(--color-dark-shade-2); }
+  .Box--text-color-dark-shade-3 { color: var(--color-dark-shade-3); }
+  .Box--text-color-light-shade-1 { color: var(--color-light-shade-1); }
+  .Box--text-color-light-shade-2 { color: var(--color-light-shade-2); }
+  .Box--text-color-light-shade-3 { color: var(--color-light-shade-3); }
+  .Box--text-color-text-shade-1 { color: var(--color-text-shade-1); }
+  .Box--text-color-text-shade-2 { color: var(--color-text-shade-2); }
+  .Box--text-color-text-shade-3 { color: var(--color-text-shade-3); }
+  .Box--text-color-negative-shade-1 { color: var(--color-negative-shade-1); }
+  .Box--text-color-negative-shade-2 { color: var(--color-negative-shade-2); }
+  .Box--text-color-negative-shade-3 { color: var(--color-negative-shade-3); }
+  .Box--text-color-negative-shade-4 { color: var(--color-negative-shade-4); }
+  .Box--text-color-negative-shade-5 { color: var(--color-negative-shade-5); }
+  .Box--text-color-positive-shade-1 { color: var(--color-positive-shade-1); }
+  .Box--text-color-positive-shade-2 { color: var(--color-positive-shade-2); }
+  .Box--text-color-positive-shade-3 { color: var(--color-positive-shade-3); }
+  .Box--text-color-positive-shade-4 { color: var(--color-positive-shade-4); }
+  .Box--text-color-positive-shade-5 { color: var(--color-positive-shade-5); }
+  

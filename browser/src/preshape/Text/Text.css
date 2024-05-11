@@ -1,0 +1,92 @@
+body {
+  color: var(--color-text-shade-2);
+  font-family: var(--text-family--content);
+  font-size: var(--text-size--body);
+  -webkit-font-smoothing: antialiased;
+  line-height: var(--text-height--body);
+}
+
+.Text {
+  font-weight: inherit;
+}
+
+.Text--monospace { font-family: var(--text-family--monospace); }
+
+.Text--align-start  { text-align: left; }
+.Text--align-middle { text-align: center; }
+.Text--align-end    { text-align: right; }
+
+.Text--break-all  { word-break: break-all; }
+.Text--break-none { white-space: nowrap; }
+.Text--break-word { word-wrap: break-word; }
+
+.Text--size-x1 {
+  font-size: var(--text-size--x1);
+  line-height: var(--text-height--x1);
+}
+
+.Text--size-x2 {
+  font-size: var(--text-size--x2);
+  line-height: var(--text-height--x2);
+}
+
+.Text--size-x3 {
+  font-size: var(--text-size--x3);
+  line-height: var(--text-height--x3);
+}
+
+.Text--size-x4 {
+  font-size: var(--text-size--x4);
+  line-height: var(--text-height--x4);
+}
+
+.Text--size-x5 {
+  font-size: var(--text-size--x5);
+  line-height: var(--text-height--x5);
+}
+
+.Text--size-x6 {
+  font-size: var(--text-size--x6);
+  line-height: var(--text-height--x6);
+}
+
+.Text--size-x7 {
+  font-size: var(--text-size--x7);
+  line-height: var(--text-height--x7);
+}
+
+.Text--size-x8 {
+  font-size: var(--text-size--x8);
+  line-height: var(--text-height--x8);
+}
+
+.Text--weight-x1 { font-weight: var(--text-weight--x1); }
+.Text--weight-x2 { font-weight: var(--text-weight--x2); }
+.Text--weight-x3 { font-weight: var(--text-weight--x3); }
+.Text--weight-x4 { font-weight: var(--text-weight--x4); }
+.Text--weight-x5 { font-weight: var(--text-weight--x5); }
+
+.Text--ellipsis {
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.Text--emphasis { font-style: italic; }
+
+.Text--superscript,
+.Text--subscript {
+  position: relative;
+  font-size: var(--text-size--x2);
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+/* stylelint-disable */
+.Text--subscript   { bottom: -0.25em; }
+.Text--superscript { top: -0.5em; }
+/* stylelint-enable */
+
+.Text--titlecase { text-transform: capitalize; }
+.Text--uppercase { text-transform: uppercase; }

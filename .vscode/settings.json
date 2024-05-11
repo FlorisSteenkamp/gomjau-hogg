@@ -1,0 +1,4 @@
+{
+    "wallaby.outputInspectorFeature.automaticDisplay": "Never",
+    "wallaby.outputInspectorFeature.automaticDisplayDebuggerOverride": "Never"
+}
