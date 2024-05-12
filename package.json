@@ -7,7 +7,8 @@
     },
     "license": "MIT",
     "type": "module",
-    "main": "index.js",
+    "main": "./node/index.js",
+    "exports": "./node/index.js",
     "engines": {
         "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
     },
@@ -18,7 +19,7 @@
     "dependencies": {},
     "devDependencies": {
         "@jest/globals": "^29.7.0",
-        "@swc/core": "^1.4.16",
+        "@swc/core": "^1.5.5",
         "@swc/jest": "^0.2.36",
         "@types/jest": "^29.5.12",
         "jest": "^29.7.0",

@@ -2,16 +2,12 @@
   "compilerOptions": {
       "strict": true,
       "module": "es2022",
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "moduleResolution": "node",
       "target": "es2022",
+      "moduleResolution": "node",
       "declaration": true,
       "noEmitOnError": true,
       "sourceMap": true,
-      "outDir": "./dist",
-      "allowJs": true,
-      "paths": {},
+      "outDir": "node",
       "baseUrl": "."
     },
     "include": [
