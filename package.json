@@ -1,7 +1,7 @@
 {
     "name": "gomjau-hogg",
     "description": "Gomjau-hogg notation tessellations of regular polygons",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "author": {
         "name": "Harry Hogg (modified by Floris Steenkamp)"
     },
