@@ -7,6 +7,7 @@ import { ColorScale, getColorScale } from './utils/get-color-scale';
 import { drawShapes } from './antwerp-drawer/antwerp-drawer';
 
 
+
 interface Props extends BoxProps {
     readonly colorMethod: 'placement' | 'transform';
     readonly colorScale?: ColorScale;
@@ -40,7 +41,6 @@ function Antwerp(props: Props) {
     React.useEffect(
         () => {
             if (!data) { return; }
-
 
             const svg = svgRef.current!;
             svg.setAttributeNS(null, 'viewBox', `${-width/2} ${-height/2} ${width} ${height}`)

@@ -7,12 +7,10 @@
       "declaration": true,
       "noEmitOnError": true,
       "sourceMap": true,
-      "outDir": "node",
-      "baseUrl": "."
+      "outDir": "node"
     },
     "include": [
-        "./src/index.ts",
-        "./src/**/*.ts"
+        "./src/index.ts"
     ],
     "exclude": [
         "node_modules"

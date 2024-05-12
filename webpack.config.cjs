@@ -4,8 +4,8 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 
 module.exports = {
-    mode: 'development',
-    devtool: 'inline-source-map',
+    // mode: 'development',
+    mode: 'production',
     entry: './src/index.ts',
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
@@ -22,14 +22,7 @@ module.exports = {
                 test: /\.([cm]?ts|tsx)$/,
                 loader: 'ts-loader',
                 exclude: /^(node_modules)$/
-            },
-            {
-                test: /\.css$/,
-                use: [
-                  'style-loader',
-                  'css-loader'
-                ]
-              }
+            }
         ]
     },
     output: {
@@ -37,7 +30,7 @@ module.exports = {
         filename: 'index.js'
     },
     stats: {
-        // Don't display heaps of crap
+        // Don't display most things
         all: false,
         colors: true,
         errors: true,
