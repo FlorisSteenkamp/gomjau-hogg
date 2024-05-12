@@ -16,6 +16,12 @@
         "type": "git",
         "url": "git+https://github.com/FlorisSteenkamp/gomjau-hogg.git"
     },
+    "keywords": [
+        "tiling",
+        "tessellation",
+        "convex",
+        "polygon"
+    ],
     "dependencies": {},
     "devDependencies": {
         "@jest/globals": "^29.7.0",
