@@ -1,0 +1,1 @@
+{"version":3,"file":"subtract-vector.js","sourceRoot":"","sources":["../../src/vector/subtract-vector.ts"],"names":[],"mappings":"AACA;;GAEG;AACH,SAAS,cAAc,CAAC,EAAY,EAAE,EAAY;IAC9C,OAAO;QACH,EAAE,CAAC,CAAC,CAAC,GAAG,EAAE,CAAC,CAAC,CAAC;QACb,EAAE,CAAC,CAAC,CAAC,GAAG,EAAE,CAAC,CAAC,CAAC;KAChB,CAAC;AACN,CAAC;AAGD,OAAO,EAAE,cAAc,EAAE,CAAA"}

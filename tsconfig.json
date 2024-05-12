@@ -1,16 +1,16 @@
 {
-  "compilerOptions": {
-      "strict": true,
-      "module": "es2022",
-      "target": "es2022",
-      "moduleResolution": "node",
-      "declaration": true,
-      "noEmitOnError": true,
-      "sourceMap": true,
-      "outDir": "node"
+    "compilerOptions": {
+        "strict": true,
+        "module": "es2022",
+        "target": "es2022",
+        "moduleResolution": "node",
+        "declaration": true,
+        "noEmitOnError": true,
+        "sourceMap": true,
+        "outDir": "node"
     },
     "include": [
-        "./src/index.ts"
+        "src/index.ts"
     ],
     "exclude": [
         "node_modules"
