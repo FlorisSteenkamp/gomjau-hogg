@@ -1,5 +1,5 @@
-import { ShapeType } from "./shape-type";
-import { Transform } from "./transform";
+import { ShapeType } from "./shape-type.js";
+import { Transform } from "./transform.js";
 
 
 interface Entities {

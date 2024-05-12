@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react';
-import { FormContextProps } from './FormProvider';
+import { FormContextProps } from './FormProvider.js';
 
 export const FormContext = createContext<FormContextProps<any, any>>({
   form: {

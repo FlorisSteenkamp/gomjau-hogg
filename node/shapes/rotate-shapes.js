@@ -1,5 +1,5 @@
-import { zeroVector } from "../vector/zero-vector";
-import { rotateVectorAround } from "../vector/rotate-vector-around";
+import { zeroVector } from "../vector/zero-vector.js";
+import { rotateVectorAround } from "../vector/rotate-vector-around.js";
 function rotateShapesAround(θm, v = zeroVector, shapes) {
     const stage = shapes[0].stage + 1;
     const shapes_ = [];

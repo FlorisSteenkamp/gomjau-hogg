@@ -1,8 +1,8 @@
-import { fromSides } from '../shape/from-sides';
-import { Shape } from '../shape/shape';
-import { ErrorSeed } from './errors';
-import { rotateShape } from '../shape/rotate-shape';
-import { ShapeType } from '../types/shape-type';
+import { fromSides } from '../shape/from-sides.js';
+import { Shape } from '../shape/shape.js';
+import { ErrorSeed } from './errors.js';
+import { rotateShape } from '../shape/rotate-shape.js';
+import { ShapeType } from '../types/shape-type.js';
 
 const { sqrt } = Math;
 const SQRT3 = sqrt(3);

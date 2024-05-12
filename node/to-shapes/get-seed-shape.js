@@ -1,6 +1,6 @@
-import { fromSides } from '../shape/from-sides';
-import { ErrorSeed } from './errors';
-import { rotateShape } from '../shape/rotate-shape';
+import { fromSides } from '../shape/from-sides.js';
+import { ErrorSeed } from './errors.js';
+import { rotateShape } from '../shape/rotate-shape.js';
 const { sqrt } = Math;
 const SQRT3 = sqrt(3);
 const seedShapes = {

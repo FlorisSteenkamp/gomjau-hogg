@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Antwerp } from '../antwerp';
-import { Box } from '../preshape/box/box';
-import { Text } from '../preshape/Text/Text';
-import { Configuration } from './configuration';
 import { useSearch } from 'wouter';
-import { getUrlParams } from './utils/get-url-params';
+import { Antwerp } from '../antwerp.js';
+import { Box } from '../preshape/box/box.js';
+import { Text } from '../preshape/Text/Text.js';
+import { Configuration } from './configuration.js';
+import { getUrlParams } from './utils/get-url-params.js';
 
 
 interface Props extends Configuration {

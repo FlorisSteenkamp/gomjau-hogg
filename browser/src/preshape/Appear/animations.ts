@@ -1,6 +1,6 @@
 import { Transition, Variant } from 'framer-motion';
-import { sizeX4Px, transitionTimingFunction } from '../variables';
-import { TypeAnimation } from './Appear';
+import { sizeX4Px, transitionTimingFunction } from '../variables.js';
+import { TypeAnimation } from './Appear.js';
 
 const defaultTransition: Transition = {
   ease: transitionTimingFunction,

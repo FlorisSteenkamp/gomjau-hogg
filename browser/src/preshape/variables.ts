@@ -1,5 +1,5 @@
 import color from 'open-color';
-import { TypeTheme } from './types';
+import { TypeTheme } from './types.js';
 
 const hexToRGBA = (hex: string, a: number): string => {
   const r = parseInt(hex.slice(1, 3), 16);

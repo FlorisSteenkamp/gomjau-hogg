@@ -1,4 +1,4 @@
-import { Shape } from "../shape/shape";
+import { Shape } from "../shape/shape.js";
 /**
  *
  * @param buckets Set holding hashes of existing shapes

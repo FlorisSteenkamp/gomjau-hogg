@@ -1,5 +1,5 @@
 import { useState, useEffect, SetStateAction, useCallback } from 'react';
-import { FormState } from './FormProvider';
+import { FormState } from './FormProvider.js';
 
 export type FormValidateError<T, E> = Partial<Record<keyof T, E>>;
 

@@ -1,11 +1,5 @@
 import classnames from 'classnames';
-import {
-    AllHTMLAttributes,
-    CSSProperties,
-    SVGAttributes,
-    createElement,
-    forwardRef
-} from 'react';
+import { AllHTMLAttributes, CSSProperties, SVGAttributes, createElement, forwardRef } from 'react';
 import './box.css';
 import {
     TypeBorderSize,
@@ -13,7 +7,7 @@ import {
     TypePosition,
     TypeSize,
     TypeTheme
-} from '../types';
+} from '../types.js';
 
 
 type IntrinsicAttributes = {} & Omit<AllHTMLAttributes<any>, 'wrap'> &

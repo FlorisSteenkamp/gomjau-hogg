@@ -1,5 +1,5 @@
-import { angleEquals } from "../vector/angle-equals";
-import { getAngleClockwiseFromYAxis } from "../vector/get-angle-clockwise-from-y-axis";
+import { angleEquals } from "../vector/angle-equals.js";
+import { getAngleClockwiseFromYAxis } from "../vector/get-angle-clockwise-from-y-axis.js";
 
 const { PI, hypot } = Math;
 

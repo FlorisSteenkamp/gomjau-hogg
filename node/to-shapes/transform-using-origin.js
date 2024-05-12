@@ -1,7 +1,7 @@
-import { rotateShapesAround } from '../shapes/rotate-shapes';
-import { zeroVector } from '../vector/zero-vector';
-import { reflectShapes } from '../shapes/reflect-shapes';
-import { getNewShapes } from '../shapes/get-new-shapes';
+import { rotateShapesAround } from '../shapes/rotate-shapes.js';
+import { zeroVector } from '../vector/zero-vector.js';
+import { reflectShapes } from '../shapes/reflect-shapes.js';
+import { getNewShapes } from '../shapes/get-new-shapes.js';
 const { round } = Math;
 function transformUsingOrigin(buckets, newShapesGrow, transform) {
     const { angle, transformType } = transform;

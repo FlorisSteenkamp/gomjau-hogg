@@ -1,9 +1,9 @@
-import { Transform } from '../types/transform';
-import { rotateShapesAround } from '../shapes/rotate-shapes';
-import { zeroVector } from '../vector/zero-vector';
-import { Shape } from '../shape/shape';
-import { reflectShapes } from '../shapes/reflect-shapes';
-import { getNewShapes } from '../shapes/get-new-shapes';
+import { Transform } from '../types/transform.js';
+import { rotateShapesAround } from '../shapes/rotate-shapes.js';
+import { zeroVector } from '../vector/zero-vector.js';
+import { Shape } from '../shape/shape.js';
+import { reflectShapes } from '../shapes/reflect-shapes.js';
+import { getNewShapes } from '../shapes/get-new-shapes.js';
 
 const { round } = Math;
 

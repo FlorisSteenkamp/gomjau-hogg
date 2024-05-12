@@ -1,10 +1,10 @@
-import { AntwerpData } from '../../../src/types/antwerp-data';
-import { colorDarkShade1 } from '../preshape/colors';
-import { getShapeFill } from './get-shape-fill';
-import { DrawOptions } from './draw-options';
-import { TransformPoint } from '../../../src/types/transform-point';
-import { Shape } from '../../../src/shape/shape';
-import { fromCentroidAndAngle } from '../../../src/shape/from-centroid-and-angle';
+import { AntwerpData } from '../../../src/types/antwerp-data.js';
+import { colorDarkShade1 } from '../preshape/colors.js';
+import { getShapeFill } from './get-shape-fill.js';
+import { DrawOptions } from './draw-options.js';
+import { TransformPoint } from '../../../src/types/transform-point.js';
+import { Shape } from '../../../src/shape/shape.js';
+import { fromCentroidAndAngle } from '../../../src/shape/from-centroid-and-angle.js';
 
 const ns = 'http://www.w3.org/2000/svg';
 

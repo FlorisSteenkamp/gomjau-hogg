@@ -1,5 +1,5 @@
-import { Shape } from "../shape/shape";
-import { reflectVector } from "../vector/reflect-vector";
+import { Shape } from "../shape/shape.js";
+import { reflectVector } from "../vector/reflect-vector.js";
 
 
 function reflectShapes(

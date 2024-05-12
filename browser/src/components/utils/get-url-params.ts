@@ -1,6 +1,6 @@
-import { URLState } from '../url-state';
-import { ColorScale, colorScales } from "../../utils/get-color-scale";
-import { defaults } from '../../defaults';
+import { URLState } from '../url-state.js';
+import { ColorScale, colorScales } from '../../utils/get-color-scale.js';
+import { defaults } from '../../defaults.js';
 
 
 function getUrlParams(

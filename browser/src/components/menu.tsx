@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Link, useSearch } from 'wouter';
-import { List } from '../preshape/List/List';
-import { ListItem } from '../preshape/List/ListItem';
 import { Library, Pencil } from 'lucide-react';
+import { Link, useSearch } from 'wouter';
+import { List } from '../preshape/List/List.js';
+import { ListItem } from '../preshape/List/ListItem.js';
 
 
 function Menu() {

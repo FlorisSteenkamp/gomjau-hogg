@@ -1,4 +1,4 @@
-import { PointType } from "./point-type";
+import { PointType } from "./point-type.js";
 interface TransformPoint {
     /** Vector to transform point (from origin) */
     readonly v: number[];

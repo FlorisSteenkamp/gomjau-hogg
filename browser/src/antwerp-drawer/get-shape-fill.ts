@@ -1,7 +1,7 @@
-import { AntwerpData } from '../../../src/types/antwerp-data';
-import { colorLightShade1 } from '../preshape/colors';
-import { DrawOptions } from './draw-options';
-import { Shape } from '../../../src/shape/shape';
+import { AntwerpData } from '../../../src/types/antwerp-data.js';
+import { colorLightShade1 } from '../preshape/colors.js';
+import { DrawOptions } from './draw-options.js';
+import { Shape } from '../../../src/shape/shape.js';
 
 
 function getShapeFill(

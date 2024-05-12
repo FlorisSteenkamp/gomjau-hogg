@@ -1,6 +1,6 @@
-import { zeroVector } from "../vector/zero-vector";
-import { Shape } from "../shape/shape";
-import { rotateVectorAround } from "../vector/rotate-vector-around";
+import { zeroVector } from "../vector/zero-vector.js";
+import { Shape } from "../shape/shape.js";
+import { rotateVectorAround } from "../vector/rotate-vector-around.js";
 
 
 function rotateShapesAround(

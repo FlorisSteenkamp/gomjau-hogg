@@ -1,11 +1,11 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import { forwardRef } from 'react';
-import { useFormContext } from '../Form/useFormContext';
-import { useFormRegisterField } from '../Form/useFormRegisterField';
-import { Text, TextProps } from '../Text/Text';
-import { TypeColor } from '../types';
-import { InputWrapper, InputWrapperProps } from './InputWrapper';
+import { useFormContext } from '../Form/useFormContext.js';
+import { useFormRegisterField } from '../Form/useFormRegisterField.js';
+import { Text, TextProps } from '../Text/Text.js';
+import { TypeColor } from '../types.js';
+import { InputWrapper, InputWrapperProps } from './InputWrapper.js';
 import './Input.css';
 
 

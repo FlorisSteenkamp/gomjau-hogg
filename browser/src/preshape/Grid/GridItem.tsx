@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { Box, BoxProps } from '../Box/Box';
+import { Box, BoxProps } from '../Box/Box.js';
 
 /**
  * A grid item is a child of the Grid component. It can be

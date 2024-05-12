@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { forwardRef } from 'react';
-import { Box, BoxProps } from '../box/box';
-import { FormProvider, FormProviderProps } from './FormProvider';
+import { Box, BoxProps } from '../box/box.js';
+import { FormProvider, FormProviderProps } from './FormProvider.js';
 
 
 /**

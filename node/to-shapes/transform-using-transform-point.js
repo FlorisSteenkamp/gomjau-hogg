@@ -1,6 +1,6 @@
-import { rotateShapesAround } from '../shapes/rotate-shapes';
-import { reflectShapes } from '../shapes/reflect-shapes';
-import { getNewShapes } from '../shapes/get-new-shapes';
+import { rotateShapesAround } from '../shapes/rotate-shapes.js';
+import { reflectShapes } from '../shapes/reflect-shapes.js';
+import { getNewShapes } from '../shapes/get-new-shapes.js';
 function transformUsingTransformPoint(buckets, newShapesFill, transform, transformPoints) {
     const { pointIndex, transformType } = transform;
     const transformPoint = transformPoints.get(pointIndex);

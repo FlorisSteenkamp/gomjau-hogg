@@ -6,8 +6,8 @@ import {
   useMemo,
   useCallback,
 } from 'react';
-import { FormValidateError } from './useForm';
-import { FormContext } from './useFormContext';
+import { FormValidateError } from './useForm.js';
+import { FormContext } from './useFormContext.js';
 
 export type FormState<T, E> = {
   error: FormValidateError<T, E>;

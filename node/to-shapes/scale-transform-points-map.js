@@ -1,4 +1,4 @@
-import { scaleVector } from "../vector/scale";
+import { scaleVector } from "../vector/scale.js";
 function scaleTransformPointsMaps(shapeSize, transformPointsMaps) {
     const maps = [];
     for (const m of transformPointsMaps) {

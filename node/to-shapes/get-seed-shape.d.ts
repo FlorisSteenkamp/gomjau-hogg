@@ -1,5 +1,5 @@
-import { Shape } from '../shape/shape';
-import { ShapeType } from '../types/shape-type';
+import { Shape } from '../shape/shape.js';
+import { ShapeType } from '../types/shape-type.js';
 declare const seedShapes: {
     3: {
         ps: number[][];

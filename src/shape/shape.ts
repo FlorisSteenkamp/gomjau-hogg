@@ -1,4 +1,4 @@
-import { ShapeType } from "../types/shape-type";
+import { ShapeType } from "../types/shape-type.js";
 
 
 interface Shape {

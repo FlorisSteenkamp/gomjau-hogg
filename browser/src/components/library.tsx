@@ -1,14 +1,14 @@
 import * as React from 'react';
 import groupBy from 'lodash.groupby';
-import { Button } from '../preshape/Button/Button';
-import { Buttons } from '../preshape/Button/Buttons';
-import { Text } from '../preshape/Text/Text';
-import { Box } from '../preshape/box/box';
-import { Grid } from '../preshape/Grid/Grid';
-import { configurations } from './configurations';
-import { LibraryEntry } from './library-entry';
 import { useLocation, useSearch } from 'wouter';
-import { updSearchParams } from '../utils/upd-search-params';
+import { Button } from '../preshape/Button/Button.js';
+import { Buttons } from '../preshape/Button/Buttons.js';
+import { Text } from '../preshape/Text/Text.js';
+import { Box } from '../preshape/box/box.js';
+import { Grid } from '../preshape/Grid/Grid.js';
+import { configurations } from './configurations.js';
+import { LibraryEntry } from './library-entry.js';
+import { updSearchParams } from '../utils/upd-search-params.js';
 
 
 function Library() {

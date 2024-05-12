@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { BoxProps, Box } from './preshape/box/box';
-import { useResizeObserver } from './preshape/hooks/use-resize-observer';
-import { AntwerpData } from '../../src/types/antwerp-data';
-import { toShapes } from '../../src/to-shapes/to-shapes';
-import { ColorScale, getColorScale } from './utils/get-color-scale';
-import { drawShapes } from './antwerp-drawer/antwerp-drawer';
+import { BoxProps, Box } from './preshape/box/box.js';
+import { useResizeObserver } from './preshape/hooks/use-resize-observer.js';
+import { AntwerpData } from '../../src/types/antwerp-data.js';
+import { toShapes } from '../../src/to-shapes/to-shapes.js';
+import { ColorScale, getColorScale } from './utils/get-color-scale.js';
+import { drawShapes } from './antwerp-drawer/antwerp-drawer.js';
 
 
 

@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { LogoDaySvg } from './assets/logo-day';
-import { LogoNightSvg } from './assets/logo-night';
+import { LogoNightSvg } from './assets/logo-night.js';
 
 
 interface Props extends React.SVGAttributes<SVGSVGElement> {}

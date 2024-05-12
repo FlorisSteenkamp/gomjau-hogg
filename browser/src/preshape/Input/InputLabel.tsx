@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { forwardRef } from 'react';
-import { Box, BoxProps } from '../box/box';
-import { Text } from '../components/Text/Text';
+import { Box, BoxProps } from '../box/box.js';
+import { Text } from '../components/Text/Text.js';
 
 /**
  * The label element of the input. This should be placed

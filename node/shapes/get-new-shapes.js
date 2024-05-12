@@ -1,4 +1,4 @@
-import { getCoordinateBuckets } from "../hash/get-coordinate-buckets";
+import { getCoordinateBuckets } from "../hash/get-coordinate-buckets.js";
 const { max, sign } = Math;
 /**
  *

@@ -1,7 +1,7 @@
-import { addVector } from "../vector/add-vector";
-import { distanceBetween } from "../vector/distance-between";
-import { subtractVector } from "../vector/subtract-vector";
-import { getCentroid } from "./get-centroid";
+import { addVector } from "../vector/add-vector.js";
+import { distanceBetween } from "../vector/distance-between.js";
+import { subtractVector } from "../vector/subtract-vector.js";
+import { getCentroid } from "./get-centroid.js";
 const { PI, cos, sin, atan2, round } = Math;
 function fromLineSegment(sides, ls, stagePlacement) {
     const [v1, v2] = ls;

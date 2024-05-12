@@ -1,9 +1,8 @@
 import * as React from 'react';
-import classnames from 'classnames';
 import { CSSProperties, forwardRef, MouseEvent } from 'react';
-// import { useHref, useLinkClickHandler } from 'react-router-dom';
-import { Text, TextProps } from '../Text/Text';
-import { TypeColor } from '../types';
+import classnames from 'classnames';
+import { Text, TextProps } from '../Text/Text.js';
+import { TypeColor } from '../types.js';
 import './Button.css';
 
 export type TypeButtonSize = 'x1' | 'x2' | 'x3';

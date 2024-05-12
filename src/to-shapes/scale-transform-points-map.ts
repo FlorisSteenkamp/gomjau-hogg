@@ -1,5 +1,5 @@
-import { TransformPoint } from "../types/transform-point";
-import { scaleVector } from "../vector/scale";
+import { TransformPoint } from "../types/transform-point.js";
+import { scaleVector } from "../vector/scale.js";
 
 
 function scaleTransformPointsMaps(

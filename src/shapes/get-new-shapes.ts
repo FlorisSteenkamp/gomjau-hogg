@@ -1,5 +1,5 @@
-import { Shape } from "../shape/shape";
-import { getCoordinateBuckets } from "../hash/get-coordinate-buckets";
+import { Shape } from "../shape/shape.js";
+import { getCoordinateBuckets } from "../hash/get-coordinate-buckets.js";
 
 const { max, sign } = Math;
 

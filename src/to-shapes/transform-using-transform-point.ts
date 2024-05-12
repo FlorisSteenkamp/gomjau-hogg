@@ -1,9 +1,9 @@
-import { Transform } from '../types/transform';
-import { rotateShapesAround } from '../shapes/rotate-shapes';
-import { reflectShapes } from '../shapes/reflect-shapes';
-import { Shape } from '../shape/shape';
-import { TransformPoint } from '../types/transform-point';
-import { getNewShapes } from '../shapes/get-new-shapes';
+import { Transform } from '../types/transform.js';
+import { rotateShapesAround } from '../shapes/rotate-shapes.js';
+import { reflectShapes } from '../shapes/reflect-shapes.js';
+import { Shape } from '../shape/shape.js';
+import { TransformPoint } from '../types/transform-point.js';
+import { getNewShapes } from '../shapes/get-new-shapes.js';
 
 
 function transformUsingTransformPoint(

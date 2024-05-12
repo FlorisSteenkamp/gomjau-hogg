@@ -1,8 +1,8 @@
 import * as React from 'react';
 import classnames from 'classnames';
 import { forwardRef } from 'react';
-import { Box, BoxProps } from '../box/box';
-import { TypeSize } from '../types';
+import { Box, BoxProps } from '../box/box.js';
+import { TypeSize } from '../types.js';
 
 /**
  * Button container component that joins or separates child components.

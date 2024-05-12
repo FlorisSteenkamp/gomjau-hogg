@@ -1,8 +1,8 @@
-import { seedShapes } from "../to-shapes/get-seed-shape";
-import { zeroVector } from "../vector/zero-vector";
-import { rotateVectorAround } from "../vector/rotate-vector-around";
-import { addVector } from "../vector/add-vector";
-import { scaleVector } from "../vector/scale";
+import { seedShapes } from "../to-shapes/get-seed-shape.js";
+import { zeroVector } from "../vector/zero-vector.js";
+import { rotateVectorAround } from "../vector/rotate-vector-around.js";
+import { addVector } from "../vector/add-vector.js";
+import { scaleVector } from "../vector/scale.js";
 function fromCentroidAndAngle(c, θm, sides, scaleFactor) {
     const { ps, θm: sθm } = seedShapes[sides];
     const ps_ = ps

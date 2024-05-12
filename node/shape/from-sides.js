@@ -1,5 +1,5 @@
-import { scaleVector } from "../vector/scale";
-import { sidelength_div_circumradius } from "./side-length-div-circumradius";
+import { scaleVector } from "../vector/scale.js";
+import { sidelength_div_circumradius } from "./side-length-div-circumradius.js";
 const { cos, sin, PI } = Math;
 /**
  * Returns a shape reprsented by its vertices.

@@ -1,14 +1,14 @@
-import { AntwerpData } from '../types/antwerp-data';
-import { toEntities } from '../to-entities';
-import { getTransformPoints } from '../shapes/get-transform-points';
-import { getSeedShapes } from './get-seed-shapes';
-import { TransformPoint } from '../types/transform-point';
-import { scaleTransformPointsMaps } from './scale-transform-points-map';
-import { createBuckets } from '../hash/ceate-buckets';
-import { getNewShapes } from '../shapes/get-new-shapes';
-import { transformUsingTransformPoint } from './transform-using-transform-point';
-import { transformUsingOrigin } from './transform-using-origin';
-import { scaleVector } from '../vector/scale';
+import { AntwerpData } from '../types/antwerp-data.js';
+import { toEntities } from '../to-entities.js';
+import { getTransformPoints } from '../shapes/get-transform-points.js';
+import { getSeedShapes } from './get-seed-shapes.js';
+import { TransformPoint } from '../types/transform-point.js';
+import { scaleTransformPointsMaps } from './scale-transform-points-map.js';
+import { createBuckets } from '../hash/ceate-buckets.js';
+import { getNewShapes } from '../shapes/get-new-shapes.js';
+import { transformUsingTransformPoint } from './transform-using-transform-point.js';
+import { transformUsingOrigin } from './transform-using-origin.js';
+import { scaleVector } from '../vector/scale.js';
 
 
 /**

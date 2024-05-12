@@ -1,4 +1,4 @@
-import { AntwerpData } from '../types/antwerp-data';
+import { AntwerpData } from '../types/antwerp-data.js';
 /**
  * Returns a regular polygon tesselation according to the given GomJauHogg
  * notation.

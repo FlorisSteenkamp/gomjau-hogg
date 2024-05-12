@@ -1,6 +1,6 @@
-import { TransformType } from './types/transform-type';
-import { Entities } from './types/entities';
-import { Transform } from './types/transform';
+import { TransformType } from './types/transform-type.js';
+import { Entities } from './types/entities.js';
+import { Transform } from './types/transform.js';
 
 
 function to15DegIntervals(s: '30'|'45'|'60'|'90'|'180'): 2|3|4|6|12 {

@@ -1,11 +1,11 @@
-import { getCentroid } from '../shape/get-centroid';
-import { getTransformPointBuckets } from '../hash/get-transform-point-buckets';
-import { isBucketZero } from '../hash/is-bucket-zero';
-import { getShapeEdges } from '../shape/get-shape-edges';
-import { fromCentroidAndAngle } from '../shape/from-centroid-and-angle';
-import { addVector } from '../vector/add-vector';
-import { subtractVector } from '../vector/subtract-vector';
-import { comparePoints } from './compare-points';
+import { getCentroid } from '../shape/get-centroid.js';
+import { getTransformPointBuckets } from '../hash/get-transform-point-buckets.js';
+import { isBucketZero } from '../hash/is-bucket-zero.js';
+import { getShapeEdges } from '../shape/get-shape-edges.js';
+import { fromCentroidAndAngle } from '../shape/from-centroid-and-angle.js';
+import { addVector } from '../vector/add-vector.js';
+import { subtractVector } from '../vector/subtract-vector.js';
+import { comparePoints } from './compare-points.js';
 const { PI, round, atan2 } = Math;
 function getTransformPoints(shapes) {
     const transformPoints = [];

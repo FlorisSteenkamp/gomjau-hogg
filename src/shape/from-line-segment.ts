@@ -1,9 +1,9 @@
-import { addVector } from "../vector/add-vector";
-import { distanceBetween } from "../vector/distance-between";
-import { subtractVector  } from "../vector/subtract-vector";
-import { Shape } from "./shape";
-import { getCentroid } from "./get-centroid";
-import { ShapeType } from "../types/shape-type";
+import { addVector } from "../vector/add-vector.js";
+import { distanceBetween } from "../vector/distance-between.js";
+import { subtractVector  } from "../vector/subtract-vector.js";
+import { Shape } from "./shape.js";
+import { getCentroid } from "./get-centroid.js";
+import { ShapeType } from "../types/shape-type.js";
 
 const { PI, cos, sin, atan2, round } = Math;
 

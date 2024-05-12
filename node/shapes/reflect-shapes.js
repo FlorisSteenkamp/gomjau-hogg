@@ -1,4 +1,4 @@
-import { reflectVector } from "../vector/reflect-vector";
+import { reflectVector } from "../vector/reflect-vector.js";
 function reflectShapes(θ2, v, shapes) {
     const shapes_ = [];
     const stage = shapes[0].stage + 1;

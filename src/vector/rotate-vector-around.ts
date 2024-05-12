@@ -1,4 +1,4 @@
-import { zeroVector } from "./zero-vector";
+import { zeroVector } from "./zero-vector.js";
 
 const { PI, sin, cos } = Math;
 

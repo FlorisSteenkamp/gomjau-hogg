@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Transition } from 'framer-motion';
 import { forwardRef } from 'react';
-import { BoxProps } from '../box/box';
-import { Motion, MotionsProps } from '../Motion/Motion';
-import { transitionTimeFast } from '../variables';
-import animations from './animations';
+import { BoxProps } from '../box/box.js';
+import { Motion, MotionsProps } from '../Motion/Motion.js';
+import { transitionTimeFast } from '../variables.js';
+import animations from './animations.js';
 
 export type TypeAnimation =
   | 'Expand'

@@ -1,5 +1,5 @@
-import { TransformPoint } from "./transform-point";
-import { TransformType } from "./transform-type";
+import { TransformPoint } from "./transform-point.js";
+import { TransformType } from "./transform-type.js";
 interface Transform {
     readonly transformType: TransformType;
     /**

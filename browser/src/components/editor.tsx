@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { Input } from '../preshape/Input/Input';
-import { Box } from '../preshape/box/box';
-import { Antwerp } from '../antwerp';
 import { useSearch } from 'wouter';
-import { getUrlParams } from './utils/get-url-params';
 import { RefreshCcw } from 'lucide-react';
-import { toShapes } from '../../../src/to-shapes/to-shapes';
+import { Input } from '../preshape/Input/Input.js';
+import { Box } from '../preshape/box/box.js';
+import { Antwerp } from '../antwerp.js';
+import { getUrlParams } from './utils/get-url-params.js';
+import { toShapes } from '../../../src/to-shapes/to-shapes.js';
 
 
 function Editor() {

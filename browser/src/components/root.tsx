@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Route, Switch, useSearch, Link } from 'wouter';
-import { Box } from '../preshape/box/box';
-import { Editor } from './editor';
-import { Menu } from './menu';
-import { Library } from './library';
-import { Logo } from './logo';
-import useMatchMedia from '../preshape/hooks/use-match-media';
-import { Text } from '../preshape/Text/Text';
+import { Box } from '../preshape/box/box.js';
+import { Editor } from './editor.js';
+import { Menu } from './menu.js';
+import { Library } from './library.js';
+import { Logo } from './logo.js';
+import useMatchMedia from '../preshape/hooks/use-match-media.js';
+import { Text } from '../preshape/Text/Text.js';
 
 
 function Root() {

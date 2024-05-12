@@ -1,4 +1,4 @@
-import { ColorScale } from '../utils/get-color-scale';
+import { ColorScale } from '../utils/get-color-scale.js';
 
 
 interface URLState {

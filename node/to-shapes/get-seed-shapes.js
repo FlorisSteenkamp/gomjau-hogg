@@ -1,11 +1,11 @@
-import { toEntities } from '../to-entities';
-import { getSeedShape } from './get-seed-shape';
-import { fromLineSegment } from '../shape/from-line-segment';
-import { getTransformPointBuckets } from '../hash/get-transform-point-buckets';
-import { getCentroid } from '../shape/get-centroid';
-import { getShapeEdges } from '../shape/get-shape-edges';
-import { fromCentroidAndAngle } from '../shape/from-centroid-and-angle';
-import { comparePoints } from '../shapes/compare-points';
+import { toEntities } from '../to-entities.js';
+import { getSeedShape } from './get-seed-shape.js';
+import { fromLineSegment } from '../shape/from-line-segment.js';
+import { getTransformPointBuckets } from '../hash/get-transform-point-buckets.js';
+import { getCentroid } from '../shape/get-centroid.js';
+import { getShapeEdges } from '../shape/get-shape-edges.js';
+import { fromCentroidAndAngle } from '../shape/from-centroid-and-angle.js';
+import { comparePoints } from '../shapes/compare-points.js';
 const { abs, max } = Math;
 const TOL = 2 ** -10;
 // E.g. 12-4,6-3
