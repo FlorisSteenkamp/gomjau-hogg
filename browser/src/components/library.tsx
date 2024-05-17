@@ -28,7 +28,7 @@ function Library() {
     function handleSelect(configuration: string) {
         const searchParamsStr_ = updSearchParams(searchParamsStr, { configuration });
 
-        setLocation(`/gomjau-hogg/?${searchParamsStr_}`);
+        setLocation(`/?${searchParamsStr_}`);
     };
 
     return (

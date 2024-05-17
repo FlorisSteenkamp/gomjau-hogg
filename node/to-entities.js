@@ -4,6 +4,7 @@ function to15DegIntervals(s) {
         case '45': return 3;
         case '60': return 4;
         case '90': return 6;
+        case '120': return 8;
         case '180': return 12;
     }
 }
@@ -56,7 +57,7 @@ function toTransform(transform) {
     if (match) {
         const [, transformType, angleStr = '180', pointIndex,] = match;
         if (angleStr !== '30' && angleStr !== '45' && angleStr !== '60' &&
-            angleStr !== '90' && angleStr !== '180') {
+            angleStr !== '90' && angleStr !== '120' && angleStr !== '180') {
             throw new Error(`Angle must be 30,45,60,90 or 180 degrees, but found ${angleStr}`);
         }
         return {

@@ -6,7 +6,7 @@ interface Transform {
      * Angle in 15 degree intervals, e.g. 45 degrees -> 3
      * * if not specified defaults to 12
      */
-    readonly angle: 2 | 3 | 4 | 6 | 12 | undefined;
+    readonly angle: 2 | 3 | 4 | 6 | 8 | 12 | undefined;
     /**
      * When not specified defaults to the center of the coordinate system else
      * uses `pointIndex`

@@ -27,7 +27,7 @@ function Root() {
                 <Box flex="horizontal" grow>
                     <Link
                         style={{ display: "block", textDecoration: 'none' }}
-                        href={`/gomjau-hogg/?${searchParamsStr}`
+                        href={`/?${searchParamsStr}`
                     }>
                         <Box
                             alignChildrenVertical="middle"
@@ -56,9 +56,9 @@ function Root() {
                 grow
             >
                 <Switch>
-                    <Route component={Library} path={`/gomjau-hogg/library`} />
-                    <Route component={Editor} path="/gomjau-hogg/" />
-                    <Route component={Editor} path="/gomjau-hogg/index.html" />
+                    <Route component={Library} path={`/library`} />
+                    <Route component={Editor} path="/" />
+                    <Route component={Editor} path="/index.html" />
                 </Switch>
             </Box>
         </Box>
