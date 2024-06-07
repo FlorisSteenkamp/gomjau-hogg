@@ -70,7 +70,7 @@ function getSeedShapes(configuration) {
         }
     }
     return {
-        shapes: [shapes],
+        seedShapes: [shapes],
         maxStagePlacement: stagePlacement
     };
 }

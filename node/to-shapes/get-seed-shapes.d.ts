@@ -1,6 +1,6 @@
 import { Shape } from '../shape/shape.js';
 declare function getSeedShapes(configuration: string): {
-    shapes: Shape[][];
+    seedShapes: Shape[][];
     maxStagePlacement: number;
 };
 export { getSeedShapes };

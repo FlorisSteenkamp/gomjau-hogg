@@ -43,9 +43,9 @@ function toShapes(
 
     const { transforms } = toEntities(configuration);
 
-    let { shapes, maxStagePlacement } = getSeedShapes(configuration);
+    const { seedShapes, maxStagePlacement } = getSeedShapes(configuration);
 
-    shapes = [getNewShapes(buckets, shapes.flat())];
+    const shapes = [getNewShapes(buckets, seedShapes.flat())];
     const transformPointsMaps: Map<string, TransformPoint>[] = [];
 
     // ------------------------------
@@ -124,6 +124,7 @@ function toShapes(
 
     const r = {
         shapes: shapes_,
+        seedShapes,
         maxStage,
         maxStagePlacement,
         transformPointsMaps: transformPointsMaps_
