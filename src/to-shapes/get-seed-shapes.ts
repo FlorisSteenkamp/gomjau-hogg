@@ -85,7 +85,7 @@ function getSeedShapes(
     }
 
     return {
-        seedShapes: [shapes],
+        seedShapes: shapes,
         maxStagePlacement: stagePlacement
     };
 }

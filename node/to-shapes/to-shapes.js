@@ -33,7 +33,7 @@ function toShapes(configuration, repeatCount, shapeSize) {
     const buckets = createBuckets();
     const { transforms } = toEntities(configuration);
     const { seedShapes, maxStagePlacement } = getSeedShapes(configuration);
-    const shapes = [getNewShapes(buckets, seedShapes.flat())];
+    const shapes = [getNewShapes(buckets, seedShapes)];
     const transformPointsMaps = [];
     // ------------------------------
     // Repeating the Transformations
