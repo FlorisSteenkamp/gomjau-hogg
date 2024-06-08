@@ -94,6 +94,7 @@ function toShapes(configuration, repeatCount, shapeSize) {
     ///////////////////
     const endTime = performance.now();
     // console.log('l', shapes_.length);
+    // console.log(shapes_);
     // console.log(((endTime - startTime)).toFixed(1) + ' ms')
     ///////////////////
     const r = {

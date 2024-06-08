@@ -21,7 +21,7 @@ const MAX_ABS_ERROR = 2 ** -16;
  */
 function getCoordinateBuckets(c) {
     const buckets = [];
-    const c_ = abs(c);
+    const c_ = c;
     const c__ = c_ / BUCKET_SIZE;
     const b1 = round(c__);
     buckets.push(b1); // usually there's only one bucket per coordinate
