@@ -32,7 +32,7 @@ function getCoordinateBuckets(
 
     const buckets: number[] = [];
 
-    const c_ = abs(c);
+    const c_ = c;
     const c__ = c_/BUCKET_SIZE;
 
     const b1 = round(c__);

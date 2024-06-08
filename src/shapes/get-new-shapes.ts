@@ -1,7 +1,7 @@
 import { Shape } from "../shape/shape.js";
 import { getCoordinateBuckets } from "../hash/get-coordinate-buckets.js";
 
-const { max, sign } = Math;
+const { abs, max, sign } = Math;
 
 
 /**
@@ -27,12 +27,18 @@ function getNewShapes(
 
         for (let i=0; i<xBuckets.length; i++) {
             for (let j=0; j<yBuckets.length; j++) {
-                const _idx = getIdx(xBuckets[i], yBuckets[j]);
+                const xBucket = xBuckets[i];
+                const yBucket = yBuckets[i];
+
+                const _idx = getIdx(xBucket, yBucket);
+
+                // console.log(x,xBucket)
+                // console.log(y,yBucket)
 
                 const idx = 4*_idx + (
-                      x >= 0
-                    ? y >= 0 ? 0 : 3
-                    : y >= 0 ? 1 : 2);
+                      xBucket >= 0
+                    ? yBucket >= 0 ? 0 : 3
+                    : yBucket >= 0 ? 1 : 2);
 
                 const bit = idx%32;
                 const word = (idx - bit) >> 5;
@@ -60,11 +66,14 @@ function getNewShapes(
 
 
 function getIdx(x: number, y: number) {
-    const a = sign(max(x - y + 1, 0));  // lower half (including diagonal)
-    const b = a*(y + x**2);
+    const x_ = abs(x);
+    const y_ = abs(y);
 
-    const c = sign(max(y - x, 0));  // upper half
-    const d = c*(y*(y + 2) - x);
+    const a = sign(max(x_ - y_ + 1, 0));  // lower half (including diagonal)
+    const b = a*(y_ + x_**2);
+
+    const c = sign(max(y_ - x_, 0));  // upper half
+    const d = c*(y_*(y_ + 2) - x_);
 
     return b + d;
 }
