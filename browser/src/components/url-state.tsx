@@ -5,7 +5,8 @@ interface URLState {
     readonly configuration: string;
     readonly colorMethod: 'placement' | 'transform';
     readonly colorScale: ColorScale ;
-    readonly repeatCount: number;
+    readonly repeatCount?: number | undefined;
+    readonly inRadius?: number | undefined;
     readonly shapeSize: number;
     readonly showTransforms: boolean;
     readonly showAxis15: boolean;

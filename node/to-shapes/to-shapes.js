@@ -7,6 +7,8 @@ import { getNewShapes } from '../shapes/get-new-shapes.js';
 import { transformUsingTransformPoint } from './transform-using-transform-point.js';
 import { transformUsingOrigin } from './transform-using-origin.js';
 import { scaleVector } from '../vector/scale.js';
+import { grahamScan } from 'flo-graham-scan';
+import { closestPointOnBezier } from 'flo-bezier3';
 /**
  * Returns a regular polygon tesselation according to the given GomJauHogg
  * notation.
@@ -22,19 +24,27 @@ import { scaleVector } from '../vector/scale.js';
  * * `maxStagePlacement` -> can be used to color shapes
  * * `transformPointsMaps` -> can be used to display transformation points
  *
- * @param options an object with the properties of `configuration` which is a
- * string in the GomJauHogg notation (e.g. `6-4-3,3/m30/r(h1)`), `repeatCount`
- * which is the number of times transforms will be repeated (e.g. 10); the number
- * of shapes grow as the square of this number and finally `shapeSize` representing
- * the length of each shape's edge.
+ * @param options an object with the properties of:
+ * * `configuration` a string in the GomJauHogg notation (e.g. `6-4-3,3/m30/r(h1)`)
+ * * `repeatCount` (if `undefined`, `inRadius` will be used instead) the number
+ * of times transforms will be
+ * repeated (e.g. 10); the number of shapes grow as the square of this number
+ * * `shapeSize` the length of each shape's edge.
+ * * `inRadius` (if `undefined` `repeatCount` will be used instead) the tiling
+ * grows until the entire tiling fits in a circle centered at the origin with
+ * this radius
  */
-function toShapes(configuration, repeatCount, shapeSize) {
+function toShapes(configuration, repeatCount, shapeSize, inRadius) {
     const startTime = performance.now();
+    if (repeatCount === undefined && inRadius === undefined) {
+        throw new Error('Both `repeatCount` and `inRadius` cannot be zero.');
+    }
     const buckets = createBuckets();
     const { transforms } = toEntities(configuration);
     const { seedShapes, maxStagePlacement } = getSeedShapes(configuration);
     const shapes = [getNewShapes(buckets, seedShapes)];
     const transformPointsMaps = [];
+    const hulls = [];
     // ------------------------------
     // Repeating the Transformations
     // ------------------------------
@@ -43,7 +53,32 @@ function toShapes(configuration, repeatCount, shapeSize) {
     let newShapesFill = shapes.flat().slice();
     let prevWasFill = true;
     let prevWasGrow = true;
-    for (let i = 0; i < repeatCount; i++) {
+    let minHull = grahamScan(seedShapes.map(s => s.c), true);
+    hulls.push(minHull);
+    let i = 0;
+    while (true) {
+        let minD = Number.POSITIVE_INFINITY;
+        const len = minHull.length;
+        for (let j = 0; j < len; j++) {
+            const j_ = (j + 1) % len;
+            const p = minHull[j];
+            const p_ = minHull[j_];
+            const l = [p, p_];
+            const { d } = closestPointOnBezier(l, [0, 0]);
+            if (d < minD) {
+                minD = d;
+            }
+        }
+        if (inRadius === undefined) {
+            if (i >= repeatCount) {
+                break;
+            }
+        }
+        else {
+            if (minD * shapeSize >= inRadius) {
+                break;
+            }
+        }
         for (let j = 0; j < transforms.length; j++) {
             const transform = transforms[j];
             if (i === 0) {
@@ -77,7 +112,11 @@ function toShapes(configuration, repeatCount, shapeSize) {
             shapes.push(addedShapes);
             prevWasFill = !isGrow;
             prevWasGrow = isGrow;
+            const ps = [...minHull, ...addedShapes.map(s => s.c)];
+            minHull = grahamScan(ps, false);
+            hulls.push(minHull);
         }
+        i++;
     }
     const shapes_ = shapes
         .flat().map(shape => {
@@ -94,15 +133,15 @@ function toShapes(configuration, repeatCount, shapeSize) {
     ///////////////////
     const endTime = performance.now();
     // console.log('l', shapes_.length);
-    // console.log(shapes_);
-    // console.log(((endTime - startTime)).toFixed(1) + ' ms')
+    console.log(((endTime - startTime)).toFixed(1) + ' ms');
     ///////////////////
     const r = {
         shapes: shapes_,
         seedShapes,
         maxStage,
         maxStagePlacement,
-        transformPointsMaps: transformPointsMaps_
+        transformPointsMaps: transformPointsMaps_,
+        hulls
     };
     // console.log(r)
     return r;

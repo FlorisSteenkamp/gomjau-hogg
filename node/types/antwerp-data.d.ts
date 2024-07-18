@@ -6,5 +6,6 @@ interface AntwerpData {
     readonly maxStage: number;
     readonly maxStagePlacement: number;
     readonly transformPointsMaps: Map<string, TransformPoint>[];
+    readonly hulls: number[][][];
 }
 export { AntwerpData };

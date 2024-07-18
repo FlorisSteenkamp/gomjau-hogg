@@ -10,14 +10,17 @@ function getUrlParams(
 
     const {
         getConfiguration, getColorMethod, getColorScale: getColorScale_,
-        getRepeatCount, getShowTransforms, getShapeSize, getShowAxis15,
+        getRepeatCountAndInRadius, getShowTransforms, getShapeSize, getShowAxis15,
         getShowAxis90, getShowVertices
     } = urlParamGetters;
 
     const configuration = getConfiguration(searchParams.get('configuration'));
     const colorMethod = getColorMethod(searchParams.get('colorMethod'));
     const colorScale = getColorScale_(searchParams.get('colorScale'));
-    const repeatCount = getRepeatCount(searchParams.get('repeatCount'));
+    const { repeatCount, inRadius } = getRepeatCountAndInRadius(
+        searchParams.get('repeatCount'),
+        searchParams.get('inRadius')
+    );
     const shapeSize = getShapeSize(searchParams.get('shapeSize'));
     const showTransforms = getShowTransforms(searchParams.get('showTransforms'));
     const showAxis15 = getShowAxis15(searchParams.get('showAxis15'));
@@ -25,8 +28,8 @@ function getUrlParams(
     const showVertices = getShowVertices(searchParams.get('showVertices'));
 
     return {
-        configuration, colorMethod, colorScale, repeatCount: repeatCount, shapeSize,
-        showTransforms, showAxis15, showAxis90, showVertices
+        configuration, colorMethod, colorScale, repeatCount, inRadius,
+        shapeSize, showTransforms, showAxis15, showAxis90, showVertices
     }
 }
 
@@ -53,15 +56,23 @@ const urlParamGetters = {
 
         return colorScales[1];
     },
-    getRepeatCount: (vStr: string | null) => {
+    getRepeatCountAndInRadius: (rStr: string | null, iStr: string | null) => {
         const defaultRepeatCount = 6;
-        if (vStr === null || vStr === undefined) {
-            return defaultRepeatCount;
-        }
-        const v = Number.parseInt(vStr);
+        const defaultInRadius = 100;
 
-        return Number.isFinite(v) && v >= 0
-            ? v : defaultRepeatCount;
+        if (rStr !== null && rStr !== undefined) {
+            const _r = Number.parseInt(rStr!);
+            const r = Number.isFinite(_r) && _r >= 0
+                ? _r : defaultRepeatCount;
+
+            return { repeatCount: r, inRadius: undefined };
+        }
+
+        const _i = Number.parseInt(iStr!);
+        const i = Number.isFinite(_i) && _i >= 0
+            ? _i : defaultInRadius;
+
+        return { repeatCount: undefined, inRadius: i };
     },
     getShowTransforms: getBooleanParam(false),
     getShapeSize: (vStr: string | null) => {
@@ -71,7 +82,7 @@ const urlParamGetters = {
         }
         const v = Number.parseInt(vStr);
 
-        return Number.isFinite(v) && v >= 3 && v <= 500
+        return Number.isFinite(v) && v >= 2 && v <= 500
             ? v : defaultShapeSize
     },
     getShowAxis15: getBooleanParam(false),

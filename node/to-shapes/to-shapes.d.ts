@@ -14,11 +14,15 @@ import { AntwerpData } from '../types/antwerp-data.js';
  * * `maxStagePlacement` -> can be used to color shapes
  * * `transformPointsMaps` -> can be used to display transformation points
  *
- * @param options an object with the properties of `configuration` which is a
- * string in the GomJauHogg notation (e.g. `6-4-3,3/m30/r(h1)`), `repeatCount`
- * which is the number of times transforms will be repeated (e.g. 10); the number
- * of shapes grow as the square of this number and finally `shapeSize` representing
- * the length of each shape's edge.
+ * @param options an object with the properties of:
+ * * `configuration` a string in the GomJauHogg notation (e.g. `6-4-3,3/m30/r(h1)`)
+ * * `repeatCount` (if `undefined`, `inRadius` will be used instead) the number
+ * of times transforms will be
+ * repeated (e.g. 10); the number of shapes grow as the square of this number
+ * * `shapeSize` the length of each shape's edge.
+ * * `inRadius` (if `undefined` `repeatCount` will be used instead) the tiling
+ * grows until the entire tiling fits in a circle centered at the origin with
+ * this radius
  */
-declare function toShapes(configuration: string, repeatCount: number, shapeSize: number): AntwerpData;
+declare function toShapes(configuration: string, repeatCount: number | undefined, shapeSize: number, inRadius?: number | undefined): AntwerpData;
 export { toShapes };

@@ -12,13 +12,13 @@ function Editor() {
     const searchParamsStr = useSearch();
 
     const {
-        colorMethod, colorScale, configuration, repeatCount, shapeSize,
-        showTransforms, showVertices
+        colorMethod, colorScale, configuration, repeatCount, inRadius,
+        shapeSize, showTransforms, showVertices
     } = getUrlParams(searchParamsStr);
 
 
     function handleUpdateConfiguration() {
-        toShapes(configuration, shapeSize, repeatCount);
+        toShapes(configuration, repeatCount, shapeSize, inRadius);
     };
 
     function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -44,6 +44,7 @@ function Editor() {
                     configuration={configuration}
                     grow
                     repeatCount={repeatCount}
+                    inRadius={inRadius}
                     shapeSize={shapeSize}
                     showTransforms={showTransforms}
                     showVertices={showVertices}
