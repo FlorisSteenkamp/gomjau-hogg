@@ -32,9 +32,6 @@ function getNewShapes(
 
                 const _idx = getIdx(xBucket, yBucket);
 
-                // console.log(x,xBucket)
-                // console.log(y,yBucket)
-
                 const idx = 4*_idx + (
                       xBucket >= 0
                     ? yBucket >= 0 ? 0 : 3

@@ -1,24 +1,25 @@
 {
-  "compilerOptions": {
-      "strict": true,
-      "module": "es2022",
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "moduleResolution": "node",
-      "target": "es2022",
-      "declaration": false,
-      "noEmitOnError": true,
-      "sourceMap": true,
-      "jsx": "react",
-      "outDir": "./dist",
-      "allowJs": true,
-      "paths": {},
-      "baseUrl": "."
+    "compilerOptions": {
+        "strict": true,
+        "module": "esnext",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "bundler",
+        "target": "esnext",
+        "declaration": false,
+        "noEmitOnError": true,
+        "sourceMap": true,
+        "jsx": "react-jsx",
+        "rootDir": "..",
+        "outDir": "./dist",
+        "allowJs": true,
+        "paths": {}
     },
-    "include": [
-        "./src/index.tsx",
-        "./src/**/*.ts"
-    ],
+        "include": [
+            "./src/index.tsx",
+            "./src/**/*",
+            "../src/**/*"
+        ],
     "exclude": [
         "node_modules"
     ]

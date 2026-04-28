@@ -10,8 +10,11 @@ import {
 } from '../types.js';
 
 
-type IntrinsicAttributes = {} & Omit<AllHTMLAttributes<any>, 'wrap'> &
-    SVGAttributes<any>;
+type IntrinsicAttributes = Omit<
+  AllHTMLAttributes<any>,
+  'wrap' | 'values'
+> &
+  Omit<SVGAttributes<any>, 'values'>;
 
 /**
  * The core component that is the end of the chain for all other components.
@@ -120,7 +123,7 @@ export interface BoxProps extends IntrinsicAttributes {
   /** Flex item property if it should shrink. */
   shrink?: boolean | CSSProperties['flexShrink'];
   /** HTML Element tag that will be rendered into the DOM */
-  tag?: keyof JSX.IntrinsicElements;
+  tag?: keyof React.JSX.IntrinsicElements;
   /** Text color, shades are taken from the current theme. */
   textColor?: TypeColor;
   /**

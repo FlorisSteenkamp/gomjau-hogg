@@ -13,11 +13,11 @@ export interface InputWrapperProps extends BoxProps {
   /**
    * Addon that appears before the Input
    */
-  addonEnd?: JSX.Element;
+  addonEnd?: React.ReactNode;
   /**
    * Addon that appears after the Input
    */
-  addonStart?: JSX.Element;
+  addonStart?: React.ReactNode;
   /**
    * Sets styling to indicate the input is invalid.
    */

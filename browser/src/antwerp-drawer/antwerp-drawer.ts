@@ -57,7 +57,11 @@ function drawShapes(
 
         const { c, θm, sides } = shape;
 
+        // TODO - fix - just testing
         const ps = fromCentroidAndAngle(c, θm, sides, shapeSize);
+        // const sides_ = sides === 4 ? 3 : sides;
+        // const θm_ = sides === 4 ? θm + 2 : θm;
+        // const ps = fromCentroidAndAngle(c, θm_, sides_, shapeSize);
 
         const points = ps
             .map(p => [p[0], -p[1]])

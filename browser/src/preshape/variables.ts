@@ -167,4 +167,5 @@ export const themePropNameCSSMap: ThemeColorMap = {
 export const transitionTimeFast = 200;
 export const transitionTimeBox = 400;
 export const transitionTimeSlow = 800;
-export const transitionTimingFunction = [0.25, 0.46, 0.45, 0.94];
+export const transitionTimingFunction: [number, number, number, number] =
+    [ 0.25, 0.46, 0.45, 0.94 ];

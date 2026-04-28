@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { forwardRef } from 'react';
 import { Box, BoxProps } from '../box/box.js';
-import { Text } from '../components/Text/Text.js';
+import { Text } from '../Text/Text.js';
 
 /**
  * The label element of the input. This should be placed
@@ -11,11 +11,11 @@ export interface InputLabelProps extends Omit<BoxProps, 'label'> {
   /**
    * A helpful description that can be displayed under the input.
    */
-  description?: string | JSX.Element;
+  description?: string | React.ReactNode;
   /**
    * The label string that is rendered above the Input.
    */
-  label?: string | JSX.Element;
+  label?: string | React.ReactNode;
 }
 
 export const InputLabel = forwardRef<any, InputLabelProps>((props, ref) => {
