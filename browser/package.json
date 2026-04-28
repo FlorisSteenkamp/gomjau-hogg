@@ -1,6 +1,6 @@
 {
     "name": "antwerp-site",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Application for Nets and Tessellations With Edge-to-edge Regular Polygons",
     "type": "module",
     "main": "index.js",
