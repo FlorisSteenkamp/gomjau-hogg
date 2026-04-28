@@ -12,7 +12,8 @@ interface Props extends BoxProps {
     readonly colorMethod: 'placement' | 'transform';
     readonly colorScale?: ColorScale;
     readonly configuration: string;
-    readonly repeatCount: number;
+    readonly repeatCount?: number | undefined;
+    readonly inRadius?: number | undefined;
     readonly shapeSize: number;
     readonly showTransforms: boolean;
     readonly showVertices: boolean;
@@ -21,8 +22,8 @@ interface Props extends BoxProps {
 
 function Antwerp(props: Props) {
     const {
-        colorMethod, colorScale, configuration, repeatCount, shapeSize,
-        showTransforms, showVertices,
+        colorMethod, colorScale, configuration, repeatCount, inRadius,
+        shapeSize, showTransforms, showVertices,
         ...rest
     } = props;
 
@@ -33,9 +34,9 @@ function Antwerp(props: Props) {
 
     React.useEffect(() => {
         if (height && width) {
-            setData(toShapes(configuration, repeatCount, shapeSize));
+            setData(toShapes(configuration, repeatCount, shapeSize, inRadius));
         }
-    }, [configuration, repeatCount, shapeSize, height, width]);
+    }, [configuration, repeatCount, inRadius, shapeSize, height, width]);
 
 
     React.useEffect(

@@ -42,7 +42,7 @@ function LibraryEntry(props: Props) {
                     colorScale={colorScale}
                     configuration={gomJauHogg}
                     height="200px"
-                    repeatCount={4}
+                    inRadius={150}
                     shapeSize={15}
                     showTransforms={false}
                     showVertices={false}
