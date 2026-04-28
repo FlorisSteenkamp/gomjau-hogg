@@ -23,18 +23,21 @@
         "convex",
         "polygon"
     ],
-    "dependencies": {},
+    "dependencies": {
+        "flo-bezier3": "^6.0.7",
+        "flo-graham-scan": "^4.0.1"
+    },
     "devDependencies": {
         "@jest/globals": "^30.3.0",
         "@swc/core": "^1.15.32",
         "@swc/jest": "^0.2.39",
         "@types/jest": "^30.0.0",
+        "circular-dependency-plugin": "^5.2.2",
         "jest": "^30.3.0",
         "ts-loader": "^9.5.7",
         "typescript": "^6.0.3",
         "webpack": "^5.106.2",
-        "webpack-cli": "^7.0.2",
-        "circular-dependency-plugin": "^5.2.2"
+        "webpack-cli": "^7.0.2"
     },
     "scripts": {
         "test": "jest",

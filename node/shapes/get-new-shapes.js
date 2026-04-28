@@ -20,8 +20,6 @@ function getNewShapes(buckets, shapes) {
                 const xBucket = xBuckets[i];
                 const yBucket = yBuckets[i];
                 const _idx = getIdx(xBucket, yBucket);
-                // console.log(x,xBucket)
-                // console.log(y,yBucket)
                 const idx = 4 * _idx + (xBucket >= 0
                     ? yBucket >= 0 ? 0 : 3
                     : yBucket >= 0 ? 1 : 2);
